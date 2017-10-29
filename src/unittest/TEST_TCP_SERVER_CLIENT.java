@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import com.arpit.framework.Test;
+import com.arpit.infra.OrganisedLog.LOG_LEVEL;
 import com.arpit.infra.TestContext;
 import com.arpit.interfaces.TestExecutor;
 import com.arpit.utils.TCPClient;
@@ -55,11 +56,11 @@ public class TEST_TCP_SERVER_CLIENT extends Test implements TestExecutor {
 
 	private void runClient(TestContext context) {
 		try {
-			TCPClient client = new TCPClient();
-			client.connect("127.0.0.1", 1200);
+			TCPClient client = new TCPClient("127.0.0.1", 1200);
+			client.connect();
 			boolean continueRun = true;
 			while (continueRun) {
-				client.writeToSocket("Hi from Client");
+				client.sendData("Hi from Client");
 				List<Byte> expectedlist = new ArrayList<>();
 				boolean keepPolling = true;
 				while (keepPolling) {
@@ -70,14 +71,14 @@ public class TEST_TCP_SERVER_CLIENT extends Test implements TestExecutor {
 						}
 					}
 					if (expectedlist.size() >= 14) {
-						context.getLogger().println("Client <== " + (expectedlist.toString()));
+						context.getLogger().println(LOG_LEVEL.DEBUG, "Client <== " + (expectedlist.toString()));
 						keepPolling = false;
 						expectedlist.clear();
 					}
 				}
 
 			}
-			client.Disconnect();
+			client.disconnect();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -86,11 +87,11 @@ public class TEST_TCP_SERVER_CLIENT extends Test implements TestExecutor {
 
 	private void runServer(TestContext context) {
 		try {
-			TCPServer server = new TCPServer();
-			server.connect(1200);
+			TCPServer server = new TCPServer(1200);
+			server.connect();
 			boolean continueRun = true;
 			while (continueRun) {
-				server.writeToSocket("Hi from Server");
+				server.sendData("Hi from Server");
 				List<Byte> expectedlist = new ArrayList<>();
 				boolean keepPolling = true;
 				while (keepPolling) {
@@ -101,14 +102,14 @@ public class TEST_TCP_SERVER_CLIENT extends Test implements TestExecutor {
 						}
 					}
 					if (expectedlist.size() >= 14) {
-						context.getLogger().println("Serer <== " + (expectedlist.toString()));
+						context.getLogger().println(LOG_LEVEL.DEBUG, "Serer <== " + (expectedlist.toString()));
 						keepPolling = false;
 						expectedlist.clear();
 					}
 				}
 
 			}
-			server.Disconnect();
+			server.disconnect();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -46,8 +46,8 @@ public class TEST_BYTES_TO_LONG extends Test implements TestExecutor {
 			long expectedResult2 = 999999999999999999l;
 			Long resultArray2 = _con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
 			Guardian.Guard(context, GuardCheckFor.EQUAL_TO, "Bytes To Long Big Endian", expectedResult2, resultArray2);
-			
-			if(i==1000){
+
+			if (i == 1000) {
 				throw new Exception("i1000");
 			}
 		}

@@ -33,7 +33,7 @@ public class TEST_CONCAT extends Test implements TestExecutor {
 		context.setKnownToFail(false, "");
 		// --------------------------------------------------------------------------------------------
 		Convert _con = new Convert();
-		
+
 		byte[] test1 = new byte[] { 0, 1, 2, 3, 4 };
 		byte[] test2 = new byte[] { 5, 6, 7, 8 };
 		byte[] test3 = new byte[] { 9 };
@@ -57,8 +57,7 @@ public class TEST_CONCAT extends Test implements TestExecutor {
 		byte[] expectedResult2 = new byte[] { 0, 1, 2, 10, (byte) 255, 10, (byte) 255, 0 };
 		byte[] resultArray2 = _con.concat(test9, test10, test11, test12);
 		Guardian.Guard(context, GuardCheckFor.EQUAL_TO, "Concatenated Byte Array", expectedResult2, resultArray2);
-		
-		
+
 		// --------------------------------------------------------------------------------------------
 	}
 }

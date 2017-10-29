@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import com.arpit.framework.Test;
 import com.arpit.infra.OrganisedLog;
+import com.arpit.infra.OrganisedLog.LOG_LEVEL;
 import com.arpit.infra.TestContext;
 import com.arpit.interfaces.TestExecutor;
 import com.arpit.utils.PropertiesFileReader;
@@ -51,20 +52,20 @@ public class TEST_PROPERTIES_FILE_READER extends Test implements TestExecutor {
 		propReader.setValue(hmap);
 
 		// Get Value without default param
-		logger.println(propReader.getValue("A"));
-		logger.println(propReader.getValue("B"));
-		logger.println(propReader.getValue("C"));
-		logger.println(propReader.getValue("D"));
-		logger.println(propReader.getValue("E"));
+		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("A"));
+		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("B"));
+		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("C"));
+		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("D"));
+		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("E"));
 
 		// Get valid Value with default param
-		logger.println(propReader.getValue("A", "New"));
+		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("A", "New"));
 
 		// Get invalid Value with default param
-		logger.println(propReader.getValue("Z", "New"));
+		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("Z", "New"));
 
 		// Get invalid Value without default param
-		logger.println(propReader.getValue("Z"));
+		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("Z"));
 		// --------------------------------------------------------------------------------------------
 
 	}
