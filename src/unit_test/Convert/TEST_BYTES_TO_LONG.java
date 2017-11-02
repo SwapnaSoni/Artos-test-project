@@ -1,9 +1,11 @@
-package unittest;
+package unit_test.Convert;
 
 import java.nio.ByteOrder;
 
 import com.arpit.framework.Test;
+import com.arpit.infra.OrganisedLog.LOG_LEVEL;
 import com.arpit.infra.TestContext;
+import com.arpit.infra.TestContext.Status;
 import com.arpit.interfaces.TestExecutor;
 import com.arpit.utils.Convert;
 import com.arpit.utils.Guardian;
@@ -34,22 +36,40 @@ public class TEST_BYTES_TO_LONG extends Test implements TestExecutor {
 
 		context.setKnownToFail(false, "");
 		// --------------------------------------------------------------------------------------------
-		for (int i = 0; i < 1000000; i++) {
-			Convert _con = new Convert();
+		Convert _con = new Convert();
 
+		{
+			// public long bytesToLong(byte[] bytes, ByteOrder bo)
 			byte[] test1 = _con.stringHexToByteArray("0D E0 B6 B3 A7 63 FF FF");
 			long expectedResult1 = 999999999999999999l;
 			Long resultArray1 = _con.bytesToLong(test1, ByteOrder.BIG_ENDIAN);
-			Guardian.Guard(context, GuardCheckFor.EQUAL_TO, "Bytes To Long Big Endian", expectedResult1, resultArray1);
+			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Bytes To Long Big Endian", expectedResult1, resultArray1);
 
 			byte[] test2 = _con.stringHexToByteArray("FF FF 63 A7 B3 B6 E0 0D");
 			long expectedResult2 = 999999999999999999l;
 			Long resultArray2 = _con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
-			Guardian.Guard(context, GuardCheckFor.EQUAL_TO, "Bytes To Long Big Endian", expectedResult2, resultArray2);
+			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Bytes To Long Big Endian", expectedResult2, resultArray2);
+		}
 
-			if (i == 1000) {
-				throw new Exception("i1000");
+		{
+			// bad path with extra byte
+			try {
+				byte[] test2 = _con.stringHexToByteArray("FF FF 63 A7 B3 B6 E0 0D 01");
+				_con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
+
+				context.getLogger().println(LOG_LEVEL.INFO, "Did not expect to reach here");
+				context.setCurrentTestStatus(Status.FAIL);
+			} catch (Exception e) {
+				if (!e.getMessage().contains("Invalid Input Data, Can not be more than 8 bytes")) {
+					throw e;
+				}
 			}
+		}
+
+		{
+			// bad path with value larger than 9,99,99,99,99,99,99,99,999
+			byte[] test2 = _con.stringHexToByteArray("FF FF FF FF FF FF FF FF");
+			_con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
 		}
 		// --------------------------------------------------------------------------------------------
 

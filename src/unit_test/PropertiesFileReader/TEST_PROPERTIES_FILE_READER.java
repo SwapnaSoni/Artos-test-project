@@ -1,4 +1,4 @@
-package unittest;
+package unit_test.PropertiesFileReader;
 
 import java.io.File;
 import java.util.HashMap;

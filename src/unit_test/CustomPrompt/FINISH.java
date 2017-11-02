@@ -1,4 +1,4 @@
-package unittest;
+package unit_test.CustomPrompt;
 
 import com.arpit.framework.Finish;
 import com.arpit.infra.TestContext;

@@ -1,4 +1,4 @@
-package unittest;
+package unit_test.Convert;
 
 import com.arpit.framework.Test;
 import com.arpit.infra.TestContext;
@@ -34,15 +34,21 @@ public class TEST_BYTES_TO_ASCII extends Test implements TestExecutor {
 		// --------------------------------------------------------------------------------------------
 		Convert _con = new Convert();
 
-		byte[] test1 = { (byte) 0x54, (byte) 0x45, (byte) 0x53, (byte) 0x54 };
-		String expectedResult1 = "TEST";
-		String resultArray1 = _con.bytesToAscii(test1);
-		Guardian.Guard(context, GuardCheckFor.EQUAL_TO, "Bytes To ASCII", expectedResult1, resultArray1);
+		{
+			// public String bytesToStringHex(byte data, boolean bDisplaySize)
+			byte[] test1 = { (byte) 0x54, (byte) 0x45, (byte) 0x53, (byte) 0x54 };
+			String expectedResult1 = "TEST";
+			String resultArray1 = _con.bytesToAscii(test1);
+			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Bytes To ASCII", expectedResult1, resultArray1);
+		}
 
-		byte test2 = (byte) 0x54;
-		String expectedResult2 = "T";
-		String resultArray2 = _con.bytesToAscii(test2);
-		Guardian.Guard(context, GuardCheckFor.EQUAL_TO, "Byte To ASCII", expectedResult2, resultArray2);
+		{
+			// public String bytesToAscii(byte data)
+			byte test2 = (byte) 0x54;
+			String expectedResult2 = "T";
+			String resultArray2 = _con.bytesToAscii(test2);
+			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Byte To ASCII", expectedResult2, resultArray2);
+		}
 		// --------------------------------------------------------------------------------------------
 
 	}

@@ -1,4 +1,4 @@
-package unittest;
+package unit_test.TCPServer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,7 @@ public class TEST_TCP_SERVER_CLIENT extends Test implements TestExecutor {
 		});
 		t1.start();
 		t2.start();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		// --------------------------------------------------------------------------------------------
 
 	}

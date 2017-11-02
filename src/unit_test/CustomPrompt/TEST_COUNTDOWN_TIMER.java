@@ -1,4 +1,4 @@
-package unittest;
+package unit_test.CustomPrompt;
 
 import java.io.File;
 import java.util.concurrent.CountDownLatch;
