@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import com.arpit.framework.Test;
-import com.arpit.infra.TestContext;
-import com.arpit.interfaces.TestExecutor;
-import com.arpit.utils.TCPClient;
-import com.arpit.utils.TCPServer;
+import com.arpitos.framework.TEST;
+import com.arpitos.infra.TestContext;
+import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.utils.TCPClient;
+import com.arpitos.utils.TCPServer;
 
 /***
  * 
@@ -25,7 +25,7 @@ import com.arpit.utils.TCPServer;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_TCP_SERVER_CLIENT extends Test implements TestExecutor {
+public class TEST_TCP_SERVER_CLIENT extends TEST implements TestExecutor {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_TCP_SERVER_CLIENT.class, "arpit_000", "26/09/2016", "");

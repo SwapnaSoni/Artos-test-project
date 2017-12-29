@@ -5,11 +5,10 @@ import java.util.HashMap;
 
 import org.apache.logging.log4j.Logger;
 
-import com.arpit.framework.Test;
-import com.arpit.infra.OrganisedLog;
-import com.arpit.infra.TestContext;
-import com.arpit.interfaces.TestExecutor;
-import com.arpit.utils.PropertiesFileReader;
+import com.arpitos.framework.TEST;
+import com.arpitos.infra.TestContext;
+import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.utils.PropertiesFileReader;
 
 /***
  * 
@@ -26,7 +25,7 @@ import com.arpit.utils.PropertiesFileReader;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_PROPERTIES_FILE_READER extends Test implements TestExecutor {
+public class TEST_PROPERTIES_FILE_READER extends TEST implements TestExecutor {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_PROPERTIES_FILE_READER.class, "arpit_000", "26/09/2016", "");

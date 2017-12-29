@@ -4,10 +4,10 @@ import java.io.File;
 
 import javax.swing.JFileChooser;
 
-import com.arpit.framework.Test;
-import com.arpit.infra.TestContext;
-import com.arpit.interfaces.TestExecutor;
-import com.arpit.utils.Zip;
+import com.arpitos.framework.TEST;
+import com.arpitos.infra.TestContext;
+import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.utils.Zip;
 
 /***
  * 
@@ -24,7 +24,7 @@ import com.arpit.utils.Zip;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_ZIP extends Test implements TestExecutor {
+public class TEST_ZIP extends TEST implements TestExecutor {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_ZIP.class, "arpit", "31/10/2017", "");

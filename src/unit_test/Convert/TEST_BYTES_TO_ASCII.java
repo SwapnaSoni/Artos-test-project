@@ -1,11 +1,11 @@
 package unit_test.Convert;
 
-import com.arpit.framework.Test;
-import com.arpit.infra.TestContext;
-import com.arpit.interfaces.TestExecutor;
-import com.arpit.utils.Convert;
-import com.arpit.utils.Guardian;
-import com.arpit.utils.Guardian.GuardCheckFor;
+import com.arpitos.framework.TEST;
+import com.arpitos.infra.TestContext;
+import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.utils.Convert;
+import com.arpitos.utils.Guardian;
+import com.arpitos.utils.Guardian.GuardCheckFor;
 
 /***
  * 
@@ -22,7 +22,7 @@ import com.arpit.utils.Guardian.GuardCheckFor;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_BYTES_TO_ASCII extends Test implements TestExecutor {
+public class TEST_BYTES_TO_ASCII extends TEST implements TestExecutor {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_BYTES_TO_ASCII.class, "arpit_000", "18/09/2016", "");

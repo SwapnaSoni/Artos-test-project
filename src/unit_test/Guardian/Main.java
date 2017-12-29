@@ -1,20 +1,21 @@
-package unit_test.Zip;
+package unit_test.Guardian;
 
 import java.util.ArrayList;
 
-import com.arpit.framework.Tester;
-import com.arpit.interfaces.TestExecutor;
+import com.arpitos.framework.MAIN;
+import com.arpitos.interfaces.TestExecutor;
 
-public class MAIN {
+public class Main {
 
 	public static void main(String[] args) throws Exception {
-		int TestLoopCount = 1;
+		int testLoopCount = 1;
+		String serialNumber = "A123456789";
 		ArrayList<TestExecutor> tests = new ArrayList<TestExecutor>();
 
 		// --------------------------------------------------------------------------------------------
-		tests.add(new TEST_ZIP());
+		// TODO Write Test Sequence Here
 		// --------------------------------------------------------------------------------------------
 
-		Tester.run(new START(), tests, new FINISH(), MAIN.class.getPackage().getName(), TestLoopCount);
+		MAIN.run(new Start(), tests, new Finish(), Main.class.getPackage().getName(), serialNumber, testLoopCount);
 	}
 }

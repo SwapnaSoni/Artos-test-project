@@ -5,11 +5,10 @@ import java.util.concurrent.CountDownLatch;
 
 import org.apache.logging.log4j.Logger;
 
-import com.arpit.framework.Test;
-import com.arpit.infra.OrganisedLog;
-import com.arpit.infra.TestContext;
-import com.arpit.interfaces.TestExecutor;
-import com.arpit.utils.CustomPrompt;
+import com.arpitos.framework.TEST;
+import com.arpitos.infra.TestContext;
+import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.utils.CustomPrompt;
 
 /***
  * 
@@ -26,7 +25,7 @@ import com.arpit.utils.CustomPrompt;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_COUNTDOWN_TIMER extends Test implements TestExecutor {
+public class TEST_COUNTDOWN_TIMER extends TEST implements TestExecutor {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_COUNTDOWN_TIMER.class, "arpit_000", "18/09/2016", "");
