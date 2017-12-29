@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import com.arpit.framework.Test;
-import com.arpit.infra.OrganisedLog.LOG_LEVEL;
 import com.arpit.infra.TestContext;
 import com.arpit.interfaces.TestExecutor;
 import com.arpit.utils.TCPClient;
@@ -71,7 +70,7 @@ public class TEST_TCP_SERVER_CLIENT extends Test implements TestExecutor {
 						}
 					}
 					if (expectedlist.size() >= 14) {
-						context.getLogger().println(LOG_LEVEL.DEBUG, "Client <== " + (expectedlist.toString()));
+						context.getLogger().info("Client <== " + (expectedlist.toString()));
 						keepPolling = false;
 						expectedlist.clear();
 					}
@@ -102,7 +101,7 @@ public class TEST_TCP_SERVER_CLIENT extends Test implements TestExecutor {
 						}
 					}
 					if (expectedlist.size() >= 14) {
-						context.getLogger().println(LOG_LEVEL.DEBUG, "Serer <== " + (expectedlist.toString()));
+						context.getLogger().info("Serer <== " + (expectedlist.toString()));
 						keepPolling = false;
 						expectedlist.clear();
 					}

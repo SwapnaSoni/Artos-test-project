@@ -3,9 +3,10 @@ package unit_test.CustomPrompt;
 import java.io.File;
 import java.util.concurrent.CountDownLatch;
 
+import org.apache.logging.log4j.Logger;
+
 import com.arpit.framework.Test;
 import com.arpit.infra.OrganisedLog;
-import com.arpit.infra.OrganisedLog.LOG_LEVEL;
 import com.arpit.infra.TestContext;
 import com.arpit.interfaces.TestExecutor;
 import com.arpit.utils.CustomPrompt;
@@ -35,7 +36,7 @@ public class TEST_COUNTDOWN_TIMER extends Test implements TestExecutor {
 
 		context.setKnownToFail(false, "");
 		// --------------------------------------------------------------------------------------------
-		OrganisedLog logger = context.getLogger();
+		Logger logger = context.getLogger();
 		long time = System.currentTimeMillis();
 
 		// Countdown time blocking
@@ -47,7 +48,7 @@ public class TEST_COUNTDOWN_TIMER extends Test implements TestExecutor {
 		cntdwn1.setStr4("Image : Not Provided");
 		cntdwn1.Start();
 		cntdwnltch1.await();
-		logger.println(LOG_LEVEL.DEBUG, Boolean.toString(cntdwn1.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn1.isButtonNoPressed()));
+		logger.debug(Boolean.toString(cntdwn1.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn1.isButtonNoPressed()));
 
 		long time2 = System.currentTimeMillis();
 		System.out.println(Long.toString((time2 - time)));
@@ -62,7 +63,7 @@ public class TEST_COUNTDOWN_TIMER extends Test implements TestExecutor {
 		cntdwn2.setStr4("Image : Not Provided");
 		cntdwn2.Start();
 		cntdwnltch2.await();
-		logger.println(LOG_LEVEL.DEBUG, Boolean.toString(cntdwn2.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn2.isButtonNoPressed()));
+		logger.debug(Boolean.toString(cntdwn2.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn2.isButtonNoPressed()));
 
 		long time3 = System.currentTimeMillis();
 		System.out.println(Long.toString((time3 - time)));
@@ -76,7 +77,7 @@ public class TEST_COUNTDOWN_TIMER extends Test implements TestExecutor {
 		cntdwn3.setHideButtons(true);
 		cntdwn3.Start();
 		cntdwnltch3.await();
-		logger.println(LOG_LEVEL.DEBUG, Boolean.toString(cntdwn3.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn3.isButtonNoPressed()));
+		logger.debug(Boolean.toString(cntdwn3.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn3.isButtonNoPressed()));
 
 		long time4 = System.currentTimeMillis();
 		System.out.println(Long.toString((time4 - time)));
@@ -90,7 +91,7 @@ public class TEST_COUNTDOWN_TIMER extends Test implements TestExecutor {
 		cntdwn4.setStr4("Image : Provided");
 		cntdwn4.Start();
 		cntdwnltch4.await();
-		logger.println(LOG_LEVEL.DEBUG, Boolean.toString(cntdwn4.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn4.isButtonNoPressed()));
+		logger.debug(Boolean.toString(cntdwn4.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn4.isButtonNoPressed()));
 
 		long timelast = System.currentTimeMillis();
 		System.out.println(Long.toString((timelast - time)));
@@ -105,7 +106,7 @@ public class TEST_COUNTDOWN_TIMER extends Test implements TestExecutor {
 		Thread.sleep(5000);
 		cntdwn5.stop();
 		cntdwnltch5.await();
-		logger.println(LOG_LEVEL.DEBUG, Boolean.toString(cntdwn5.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn5.isButtonNoPressed()));
+		logger.debug(Boolean.toString(cntdwn5.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn5.isButtonNoPressed()));
 
 		CustomPrompt cntdwn6 = new CustomPrompt(null, 5000);
 		cntdwn6.showImage(new File("C:\\Users\\arpit_000\\Desktop\\Arpit\\Arpit_Programming\\Test_Arpitos_Utils\\assets\\images\\eye.png"));
@@ -114,7 +115,7 @@ public class TEST_COUNTDOWN_TIMER extends Test implements TestExecutor {
 		cntdwn6.setStr3("");
 		cntdwn6.setStr4("");
 		cntdwn6.Start();
-		logger.println(LOG_LEVEL.DEBUG, Boolean.toString(cntdwn6.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn6.isButtonNoPressed()));
+		logger.debug(Boolean.toString(cntdwn6.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn6.isButtonNoPressed()));
 
 		CountDownLatch cntdwnltch7 = new CountDownLatch(1);
 		CustomPrompt cntdwn7 = new CustomPrompt(cntdwnltch7, 10000);
@@ -125,8 +126,8 @@ public class TEST_COUNTDOWN_TIMER extends Test implements TestExecutor {
 		cntdwn7.setStr4("");
 		cntdwn7.Start();
 		cntdwnltch7.await();
-		logger.println(LOG_LEVEL.DEBUG, Boolean.toString(cntdwn6.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn6.isButtonNoPressed()));
-		logger.println(LOG_LEVEL.DEBUG, Boolean.toString(cntdwn7.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn7.isButtonNoPressed()));
+		logger.debug(Boolean.toString(cntdwn6.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn6.isButtonNoPressed()));
+		logger.debug(Boolean.toString(cntdwn7.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn7.isButtonNoPressed()));
 		// --------------------------------------------------------------------------------------------
 
 	}

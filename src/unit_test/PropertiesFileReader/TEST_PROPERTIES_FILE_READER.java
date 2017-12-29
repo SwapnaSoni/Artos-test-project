@@ -3,9 +3,10 @@ package unit_test.PropertiesFileReader;
 import java.io.File;
 import java.util.HashMap;
 
+import org.apache.logging.log4j.Logger;
+
 import com.arpit.framework.Test;
 import com.arpit.infra.OrganisedLog;
-import com.arpit.infra.OrganisedLog.LOG_LEVEL;
 import com.arpit.infra.TestContext;
 import com.arpit.interfaces.TestExecutor;
 import com.arpit.utils.PropertiesFileReader;
@@ -35,7 +36,7 @@ public class TEST_PROPERTIES_FILE_READER extends Test implements TestExecutor {
 
 		context.setKnownToFail(false, "");
 		// --------------------------------------------------------------------------------------------
-		OrganisedLog logger = context.getLogger();
+		Logger logger = context.getLogger();
 
 		File file = new File("./assets/properties/test.properties");
 		PropertiesFileReader propReader = new PropertiesFileReader(file);
@@ -52,20 +53,20 @@ public class TEST_PROPERTIES_FILE_READER extends Test implements TestExecutor {
 		propReader.setValue(hmap);
 
 		// Get Value without default param
-		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("A"));
-		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("B"));
-		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("C"));
-		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("D"));
-		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("E"));
+		logger.debug(propReader.getValue("A"));
+		logger.debug(propReader.getValue("B"));
+		logger.debug(propReader.getValue("C"));
+		logger.debug(propReader.getValue("D"));
+		logger.debug(propReader.getValue("E"));
 
 		// Get valid Value with default param
-		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("A", "New"));
+		logger.debug(propReader.getValue("A", "New"));
 
 		// Get invalid Value with default param
-		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("Z", "New"));
+		logger.debug(propReader.getValue("Z", "New"));
 
 		// Get invalid Value without default param
-		logger.println(LOG_LEVEL.DEBUG, propReader.getValue("Z"));
+		logger.debug(propReader.getValue("Z"));
 		// --------------------------------------------------------------------------------------------
 
 	}

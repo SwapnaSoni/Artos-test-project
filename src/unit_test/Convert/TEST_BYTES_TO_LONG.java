@@ -3,7 +3,6 @@ package unit_test.Convert;
 import java.nio.ByteOrder;
 
 import com.arpit.framework.Test;
-import com.arpit.infra.OrganisedLog.LOG_LEVEL;
 import com.arpit.infra.TestContext;
 import com.arpit.infra.TestContext.Status;
 import com.arpit.interfaces.TestExecutor;
@@ -56,8 +55,7 @@ public class TEST_BYTES_TO_LONG extends Test implements TestExecutor {
 			try {
 				byte[] test2 = _con.stringHexToByteArray("FF FF 63 A7 B3 B6 E0 0D 01");
 				_con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
-
-				context.getLogger().println(LOG_LEVEL.INFO, "Did not expect to reach here");
+				context.getLogger().info("Did not expect to reach here");
 				context.setCurrentTestStatus(Status.FAIL);
 			} catch (Exception e) {
 				if (!e.getMessage().contains("Invalid Input Data, Can not be more than 8 bytes")) {
