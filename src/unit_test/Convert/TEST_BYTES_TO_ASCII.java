@@ -1,11 +1,10 @@
 package unit_test.Convert;
 
-import com.arpitos.framework.TEST;
 import com.arpitos.infra.TestContext;
-import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
-import com.arpitos.utils.Guardian.GuardCheckFor;
+
 
 /***
  * 
@@ -22,15 +21,15 @@ import com.arpitos.utils.Guardian.GuardCheckFor;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_BYTES_TO_ASCII extends TEST implements TestExecutor {
+public class TEST_BYTES_TO_ASCII implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_BYTES_TO_ASCII.class, "arpit_000", "18/09/2016", "");
 	}
 
-	protected void execute(TestContext context) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "");
+		context.setKnownToFail(false, "JIRA-1234");
 		// --------------------------------------------------------------------------------------------
 		Convert _con = new Convert();
 
@@ -39,7 +38,7 @@ public class TEST_BYTES_TO_ASCII extends TEST implements TestExecutor {
 			byte[] test1 = { (byte) 0x54, (byte) 0x45, (byte) 0x53, (byte) 0x54 };
 			String expectedResult1 = "TEST";
 			String resultArray1 = _con.bytesToAscii(test1);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Bytes To ASCII", expectedResult1, resultArray1);
+			Guardian.guardEquals("Bytes To ASCII", expectedResult1, resultArray1);
 		}
 
 		{
@@ -47,7 +46,7 @@ public class TEST_BYTES_TO_ASCII extends TEST implements TestExecutor {
 			byte test2 = (byte) 0x54;
 			String expectedResult2 = "T";
 			String resultArray2 = _con.bytesToAscii(test2);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Byte To ASCII", expectedResult2, resultArray2);
+			Guardian.guardEquals("Byte To ASCII", expectedResult2, resultArray2);
 		}
 		// --------------------------------------------------------------------------------------------
 

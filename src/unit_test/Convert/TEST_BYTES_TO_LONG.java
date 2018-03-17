@@ -2,13 +2,11 @@ package unit_test.Convert;
 
 import java.nio.ByteOrder;
 
-import com.arpitos.framework.TEST;
 import com.arpitos.infra.TestContext;
 import com.arpitos.infra.TestContext.Status;
-import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
-import com.arpitos.utils.Guardian.GuardCheckFor;
 
 /***
  * 
@@ -25,13 +23,13 @@ import com.arpitos.utils.Guardian.GuardCheckFor;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_BYTES_TO_LONG extends TEST implements TestExecutor {
+public class TEST_BYTES_TO_LONG implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_BYTES_TO_LONG.class, "arpit_000", "18/09/2016", "");
 	}
 
-	protected void execute(TestContext context) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "");
 		// --------------------------------------------------------------------------------------------
@@ -42,12 +40,12 @@ public class TEST_BYTES_TO_LONG extends TEST implements TestExecutor {
 			byte[] test1 = _con.stringHexToByteArray("0D E0 B6 B3 A7 63 FF FF");
 			long expectedResult1 = 999999999999999999l;
 			Long resultArray1 = _con.bytesToLong(test1, ByteOrder.BIG_ENDIAN);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Bytes To Long Big Endian", expectedResult1, resultArray1);
+			Guardian.guardEquals("Bytes To Long Big Endian", expectedResult1, resultArray1);
 
 			byte[] test2 = _con.stringHexToByteArray("FF FF 63 A7 B3 B6 E0 0D");
 			long expectedResult2 = 999999999999999999l;
 			Long resultArray2 = _con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Bytes To Long Big Endian", expectedResult2, resultArray2);
+			Guardian.guardEquals("Bytes To Long Big Endian", expectedResult2, resultArray2);
 		}
 
 		{

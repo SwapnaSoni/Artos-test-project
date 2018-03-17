@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Arpitos_fork"/>
+	<classpathentry kind="lib" path="/Arpitos_fork/lib/jdbc.jar"/>
+	<classpathentry kind="lib" path="/Arpitos_fork/lib/jsch-0.1.50.jar"/>
+	<classpathentry kind="lib" path="/Arpitos_fork/lib/log4j-api-2.10.0.jar"/>
+	<classpathentry kind="lib" path="/Arpitos_fork/lib/log4j-core-2.10.0.jar"/>
+	<classpathentry kind="lib" path="/Arpitos_fork/lib/mindterm.signed.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

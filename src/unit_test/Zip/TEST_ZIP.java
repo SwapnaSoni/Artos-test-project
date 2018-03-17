@@ -4,9 +4,8 @@ import java.io.File;
 
 import javax.swing.JFileChooser;
 
-import com.arpitos.framework.TEST;
 import com.arpitos.infra.TestContext;
-import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Zip;
 
 /***
@@ -24,13 +23,13 @@ import com.arpitos.utils.Zip;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_ZIP extends TEST implements TestExecutor {
+public class TEST_ZIP implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_ZIP.class, "arpit", "31/10/2017", "");
 	}
 
-	protected void execute(TestContext context) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "");
 		// --------------------------------------------------------------------------------------------

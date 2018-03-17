@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import com.arpitos.framework.TEST;
 import com.arpitos.infra.TestContext;
-import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.TCPClient;
 import com.arpitos.utils.TCPServer;
 
@@ -25,13 +24,13 @@ import com.arpitos.utils.TCPServer;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_TCP_SERVER_CLIENT extends TEST implements TestExecutor {
+public class TEST_TCP_SERVER_CLIENT implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_TCP_SERVER_CLIENT.class, "arpit_000", "26/09/2016", "");
 	}
 
-	protected void execute(TestContext context) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "");
 

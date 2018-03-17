@@ -1,11 +1,9 @@
 package unit_test.Convert;
 
-import com.arpitos.framework.TEST;
 import com.arpitos.infra.TestContext;
-import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
-import com.arpitos.utils.Guardian.GuardCheckFor;
 
 /***
  * 
@@ -22,13 +20,13 @@ import com.arpitos.utils.Guardian.GuardCheckFor;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_BYTES_TO_STR_HEX extends TEST implements TestExecutor {
+public class TEST_BYTES_TO_STR_HEX implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_BYTES_TO_STR_HEX.class, "arpit_000", "18/09/2016", "");
 	}
 
-	protected void execute(TestContext context) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "");
 		// --------------------------------------------------------------------------------------------
@@ -39,12 +37,12 @@ public class TEST_BYTES_TO_STR_HEX extends TEST implements TestExecutor {
 			byte[] test1 = { 0, 1, 2, 10, (byte) 255 };
 			String expectedResult1 = "[5][00 01 02 0A FF]";
 			String resultArray1 = _con.bytesToStringHex(test1, true);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Bytes To String Hex with size", expectedResult1, resultArray1);
+			Guardian.guardEquals("Bytes To String Hex with size", expectedResult1, resultArray1);
 
 			byte[] test2 = { 0, 1, 2, 10, (byte) 255 };
 			String expectedResult2 = "0001020AFF";
 			String resultArray2 = _con.bytesToStringHex(test2, false);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Bytes To String Hex without size", expectedResult2, resultArray2);
+			Guardian.guardEquals("Bytes To String Hex without size", expectedResult2, resultArray2);
 		}
 
 		{
@@ -52,12 +50,12 @@ public class TEST_BYTES_TO_STR_HEX extends TEST implements TestExecutor {
 			byte test3 = (byte) 255;
 			String expectedResult3 = "[1][FF]";
 			String resultArray3 = _con.bytesToStringHex(test3, true);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Byte To String Hex with size", expectedResult3, resultArray3);
+			Guardian.guardEquals("Byte To String Hex with size", expectedResult3, resultArray3);
 
 			byte test4 = (byte) 255;
 			String expectedResult4 = "FF";
 			String resultArray4 = _con.bytesToStringHex(test4, false);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Byte To String Hex without size", expectedResult4, resultArray4);
+			Guardian.guardEquals("Byte To String Hex without size", expectedResult4, resultArray4);
 		}
 		// --------------------------------------------------------------------------------------------
 

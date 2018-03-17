@@ -5,10 +5,10 @@ import java.util.HashMap;
 
 import org.apache.logging.log4j.Logger;
 
-import com.arpitos.framework.TEST;
 import com.arpitos.infra.TestContext;
-import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.PropertiesFileReader;
+
 
 /***
  * 
@@ -19,22 +19,22 @@ import com.arpitos.utils.PropertiesFileReader;
  * EXPECTED_RESULTS		=	???
  * DEPENDENCY			=	None
  * NOTES				=	None
- * PREPARED_BY			=	arpit_000
+ * PREPARED_BY			=	arpit
  * REVIEWED_BY			=	
  * REVIEW_DATE			=	dd/mm/yyyy
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_PROPERTIES_FILE_READER extends TEST implements TestExecutor {
+public class TEST_PROPERTIES_FILE_READER implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, TEST_PROPERTIES_FILE_READER.class, "arpit_000", "26/09/2016", "");
+		onExecute(context, TEST_PROPERTIES_FILE_READER.class, "arpit", "17/03/2018", "");
 	}
 
-	protected void execute(TestContext context) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "");
-		// --------------------------------------------------------------------------------------------
+		//--------------------------------------------------------------------------------------------
 		Logger logger = context.getLogger();
 
 		File file = new File("./assets/properties/test.properties");
@@ -66,7 +66,7 @@ public class TEST_PROPERTIES_FILE_READER extends TEST implements TestExecutor {
 
 		// Get invalid Value without default param
 		logger.debug(propReader.getValue("Z"));
-		// --------------------------------------------------------------------------------------------
+		//--------------------------------------------------------------------------------------------
 
 	}
 }

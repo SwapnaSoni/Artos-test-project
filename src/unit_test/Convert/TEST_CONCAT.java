@@ -1,11 +1,9 @@
 package unit_test.Convert;
 
-import com.arpitos.framework.TEST;
 import com.arpitos.infra.TestContext;
-import com.arpitos.interfaces.TestExecutor;
+import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
-import com.arpitos.utils.Guardian.GuardCheckFor;
 
 /***
  * 
@@ -22,13 +20,13 @@ import com.arpitos.utils.Guardian.GuardCheckFor;
  * END_OF_TEST_HEADER
  * </PRE>
  */
-public class TEST_CONCAT extends TEST implements TestExecutor {
+public class TEST_CONCAT implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
 		onExecute(context, TEST_CONCAT.class, "arpit_000", "18/09/2016", "");
 	}
 
-	protected void execute(TestContext context) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "");
 		// --------------------------------------------------------------------------------------------
@@ -42,7 +40,7 @@ public class TEST_CONCAT extends TEST implements TestExecutor {
 			byte[] test4 = new byte[] { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, (byte) 255 };
 			byte[] expectedResult = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, (byte) 255 };
 			byte[] resultArray = _con.concat(test1, test2, test3, test4);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Concatenated Byte Array", expectedResult, resultArray);
+			Guardian.guardEquals("Concatenated Byte Array", expectedResult, resultArray);
 		}
 
 		{
@@ -53,7 +51,7 @@ public class TEST_CONCAT extends TEST implements TestExecutor {
 			byte test8 = 0;
 			byte[] expectedResult1 = new byte[] { 1, 10, (byte) 255, 0 };
 			byte[] resultArray1 = _con.concat(test5, test6, test7, test8);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Concatenated Byte Array", expectedResult1, resultArray1);
+			Guardian.guardEquals("Concatenated Byte Array", expectedResult1, resultArray1);
 		}
 
 		{
@@ -64,7 +62,7 @@ public class TEST_CONCAT extends TEST implements TestExecutor {
 			byte test12 = 0;
 			byte[] expectedResult2 = new byte[] { 0, 1, 2, 10, (byte) 255, 10, (byte) 255, 0 };
 			byte[] resultArray2 = _con.concat(test9, test10, test11, test12);
-			Guardian.guard(context, GuardCheckFor.EQUAL_TO, "Concatenated Byte Array", expectedResult2, resultArray2);
+			Guardian.guardEquals("Concatenated Byte Array", expectedResult2, resultArray2);
 		}
 		// --------------------------------------------------------------------------------------------
 	}
