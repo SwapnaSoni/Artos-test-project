@@ -2,8 +2,8 @@ package unit_test.Convert;
 
 import java.nio.ByteOrder;
 
+import com.arpitos.infra.Enums.TestStatus;
 import com.arpitos.infra.TestContext;
-import com.arpitos.infra.TestContext.Status;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
@@ -54,7 +54,7 @@ public class TEST_BYTES_TO_LONG implements TestExecutable {
 				byte[] test2 = _con.stringHexToByteArray("FF FF 63 A7 B3 B6 E0 0D 01");
 				_con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
 				context.getLogger().info("Did not expect to reach here");
-				context.setCurrentTestStatus(Status.FAIL);
+				context.setCurrentTestStatus(TestStatus.FAIL);
 			} catch (Exception e) {
 				if (!e.getMessage().contains("Invalid Input Data, Can not be more than 8 bytes")) {
 					throw e;
