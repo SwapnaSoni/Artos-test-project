@@ -1,4 +1,4 @@
-package unit_test.PropertiesFileReader;
+package unit_test;
 
 import org.apache.logging.log4j.Logger;
 
