@@ -3,13 +3,18 @@ package unit_test;
 import org.apache.logging.log4j.Logger;
 
 import com.arpitos.infra.TestContext;
+import com.arpitos.infra.annotation.AfterTest;
+import com.arpitos.infra.annotation.AfterTestsuit;
+import com.arpitos.infra.annotation.BeforeTest;
+import com.arpitos.infra.annotation.BeforeTestsuit;
 import com.arpitos.interfaces.PrePostRunnable;
 
 
 public class PrePostCycle implements PrePostRunnable {
 
 	@Override
-	public void preTest(TestContext context) throws Exception {
+	@BeforeTest
+	public void beforeTest(TestContext context) throws Exception {
 		Logger logger = context.getLogger();
 		logger.info(".........................................................................");
 
@@ -22,7 +27,8 @@ public class PrePostCycle implements PrePostRunnable {
 	}
 
 	@Override
-	public void postTest(TestContext context) throws Exception {
+	@AfterTest
+	public void afterTest(TestContext context) throws Exception {
 		Logger logger = context.getLogger();
 		logger.info(".........................................................................");
 
@@ -35,7 +41,8 @@ public class PrePostCycle implements PrePostRunnable {
 	}
 
 	@Override
-	public void Init(TestContext context) throws Exception {
+	@BeforeTestsuit
+	public void beforeTestsuit(TestContext context) throws Exception {
 		Logger logger = context.getLogger();
 		logger.info(".........................................................................");
 
@@ -48,7 +55,8 @@ public class PrePostCycle implements PrePostRunnable {
 	}
 
 	@Override
-	public void Cleanup(TestContext context) throws Exception {
+	@AfterTestsuit
+	public void afterTestsuit(TestContext context) throws Exception {
 		Logger logger = context.getLogger();
 		logger.info(".........................................................................");
 

@@ -1,12 +1,9 @@
-package unit_test.aRunAll;
+package unit_test;
 
 import java.util.ArrayList;
 
-import com.arpitos.framework.MAIN;
+import com.arpitos.framework.Runner;
 import com.arpitos.interfaces.TestExecutable;
-
-import unit_test.PrePostCycle;
-
 
 public class Main {
 
@@ -25,7 +22,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		int testLoopCount = 1;
 		String serialNumber = "A123456789";
-		MAIN.run(new PrePostCycle(), getTestList(), Main.class, serialNumber, testLoopCount);
+		Runner.run(new PrePostCycle(), getTestList(), Main.class, serialNumber, testLoopCount);
 	}
 
 }

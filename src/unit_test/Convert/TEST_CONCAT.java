@@ -1,29 +1,22 @@
 package unit_test.Convert;
 
 import com.arpitos.infra.TestContext;
+import com.arpitos.infra.annotation.Testcase;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
 
-/***
- * 
- * <PRE>
- * START_OF_TEST_HEADER
- * TEST_TARGET			= 	TEST_CONVERT_CLASS
- * TEST_STEPS			=	???
- * EXPECTED_RESULTS		=	???
- * DEPENDENCY			=	None
- * NOTES				=	None
- * PREPARED_BY			=	arpit_000
- * REVIEWED_BY			=	
- * REVIEW_DATE			=	dd/mm/yyyy
- * END_OF_TEST_HEADER
- * </PRE>
- */
+//@formatter:off
+@Testcase(skip = false, scenario = "TEST_BYTES_TO_ASCII",
+decription = "\nGIVEN : concat() function is used from Convert class"
+           + "\nWHEN  : valid byte or byte[] is provided as an argument"
+           + "\nTHEN  : concanated byte[] should be returned"
+, preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
+//@formatter:on
 public class TEST_CONCAT implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, TEST_CONCAT.class, "arpit_000", "18/09/2016", "");
+		onExecute(context, TEST_CONCAT.class);
 	}
 
 	public void execute(TestContext context) throws Exception {
