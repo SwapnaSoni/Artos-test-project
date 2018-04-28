@@ -11,7 +11,7 @@ import com.arpitos.utils.TCPClient;
 import com.arpitos.utils.TCPServer;
 
 //@formatter:off
-@Testcase(skip = false, scenario = "TEST_BYTES_TO_ASCII",
+@Testcase(skip = false, scenario = "Test_tcp_server_client",
 decription = "\nGIVEN : Client and Server run in seperate Thread"
            + "\nAND   : Correct Port is set on both side"
            + "\nWHEN  : Client and Server objects are executed"

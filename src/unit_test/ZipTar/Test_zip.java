@@ -11,14 +11,15 @@ import com.arpitos.utils.Guardian;
 import com.arpitos.utils.Utils;
 import com.arpitos.utils.UtilsZip;
 
-//@formatter:off
-@Testcase(skip = false, scenario = "TEST_BYTES_TO_ASCII",
+// @formatter:off
+@Testcase(skip=false, scenario = "Test_zip",
 decription = "\nGIVEN : "
            + "\nAND   : "
            + "\nWHEN  : "
+           + "\nAND   : "
            + "\nTHEN  : "
-, preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
-//@formatter:on
+, preparedBy = "arpit", preparationDate = "28/04/2018", reviewedBy = "", reviewDate = "")
+// @formatter:on
 public class Test_zip implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {

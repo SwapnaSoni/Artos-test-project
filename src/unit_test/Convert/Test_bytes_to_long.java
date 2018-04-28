@@ -10,7 +10,7 @@ import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
 
 //@formatter:off
-@Testcase(skip = false, scenario = "TEST_BYTES_TO_ASCII",
+@Testcase(skip = false, scenario = "Test_bytes_to_long",
 decription = "\nGIVEN : bytesToLong() function is used from Convert class"
            + "\nWHEN  : valid byte or byte[] is provided as an argument"
            + "\nTHEN  : long formatted value should be returned"

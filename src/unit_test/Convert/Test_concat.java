@@ -7,7 +7,7 @@ import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
 
 //@formatter:off
-@Testcase(skip = false, scenario = "TEST_BYTES_TO_ASCII",
+@Testcase(skip = false, scenario = "Test_concat",
 decription = "\nGIVEN : concat() function is used from Convert class"
            + "\nWHEN  : valid byte or byte[] is provided as an argument"
            + "\nTHEN  : concanated byte[] should be returned"

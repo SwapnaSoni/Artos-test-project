@@ -11,7 +11,7 @@ import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.CustomPrompt;
 
 //@formatter:off
-@Testcase(skip = false, scenario = "TEST_BYTES_TO_ASCII",
+@Testcase(skip = false, scenario = "Test_countdown_timer",
 decription = "\nGIVEN : CustomPrompt() function is used from CustomPrompt class"
            + "\nWHEN  : various constructor arguments are provided"
            + "\nTHEN  : prompt behaves as per user expactation"

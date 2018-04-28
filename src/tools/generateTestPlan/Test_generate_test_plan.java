@@ -1,4 +1,4 @@
-package unit_test.generateTestPlan;
+package tools.generateTestPlan;
 
 import com.arpitos.infra.TestContext;
 import com.arpitos.infra.annotation.GenerateTestPlan;
@@ -7,7 +7,7 @@ import com.arpitos.interfaces.TestExecutable;
 
 
 // @formatter:off
-@Testcase(skip=false, scenario = "TEST_GENERATE_TEST_PLAN",
+@Testcase(skip=false, scenario = "Test_generate_test_plan",
 decription = "\nGIVEN : "
            + "\nAND   : "
            + "\nWHEN  : "
@@ -25,7 +25,7 @@ public class Test_generate_test_plan implements TestExecutable {
 
 		context.setKnownToFail(false, "");
 		//--------------------------------------------------------------------------------------------
-		GenerateTestPlan testPlan = new GenerateTestPlan(context, "unit_test.Convert");
+		GenerateTestPlan testPlan = new GenerateTestPlan(context, "unit_test");
 		//--------------------------------------------------------------------------------------------
 
 	}

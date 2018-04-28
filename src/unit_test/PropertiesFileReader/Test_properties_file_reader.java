@@ -11,7 +11,7 @@ import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.PropertiesFileReader;
 
 //@formatter:off
-@Testcase(skip = false, scenario = "TEST_BYTES_TO_ASCII",
+@Testcase(skip = false, scenario = "Test_properties_file_reader",
 decription = "\nGIVEN : PropertiesFileReader() object is used"
            + "\nAND   : PropertiesFile is present in given location with appropriate tags"
            + "\nWHEN  : setValue() is exercised"

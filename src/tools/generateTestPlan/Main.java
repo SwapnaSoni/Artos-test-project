@@ -1,4 +1,4 @@
-package unit_test.generateTestPlan;
+package tools.generateTestPlan;
 
 import java.util.ArrayList;
 

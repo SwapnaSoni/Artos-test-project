@@ -7,7 +7,7 @@ import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
 
 // @formatter:off
-@Testcase(skip = false, scenario = "TEST_BYTES_TO_ASCII",
+@Testcase(skip = false, scenario = "Test_bytes_to_ascii",
 decription = "\nGIVEN : bytetoAscii() function is used from Convert class"
            + "\nWHEN  : Byte or byte array is provided as an argument"
            + "\nTHEN  : ASCII formated String should be returned"
