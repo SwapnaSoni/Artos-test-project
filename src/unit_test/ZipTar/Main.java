@@ -1,4 +1,4 @@
-package unit_test.Convert;
+package unit_test.ZipTar;
 
 import java.util.ArrayList;
 
@@ -14,10 +14,8 @@ public class Main {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
 
 		//--------------------------------------------------------------------------------------------
-		tests.add(new Test_concat());
-		tests.add(new Test_bytes_to_str_hex());
-		tests.add(new Test_bytes_to_ascii());
-		tests.add(new Test_bytes_to_long());
+		tests.add(new Test_zip());
+		tests.add(new Test_tar());
 		//--------------------------------------------------------------------------------------------
 
 		return tests;

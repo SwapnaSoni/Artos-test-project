@@ -14,7 +14,7 @@ public class Main {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
 
 		//--------------------------------------------------------------------------------------------
-		tests.add(new TEST_TCP_SERVER_CLIENT());
+		tests.add(new Test_tcp_server_client());
 		//--------------------------------------------------------------------------------------------
 
 		return tests;

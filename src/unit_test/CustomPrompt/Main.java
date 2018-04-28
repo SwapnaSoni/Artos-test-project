@@ -14,7 +14,7 @@ public class Main {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
 
 		//--------------------------------------------------------------------------------------------
-		tests.add(new TEST_COUNTDOWN_TIMER());
+		tests.add(new Test_countdown_timer());
 		//--------------------------------------------------------------------------------------------
 
 		return tests;

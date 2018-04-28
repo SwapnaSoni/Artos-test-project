@@ -13,10 +13,10 @@ decription = "\nGIVEN : bytetoAscii() function is used from Convert class"
            + "\nTHEN  : ASCII formated String should be returned"
 , preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
 // @formatter:on
-public class TEST_BYTES_TO_ASCII implements TestExecutable {
+public class Test_bytes_to_ascii implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, TEST_BYTES_TO_ASCII.class);
+		onExecute(context, Test_bytes_to_ascii.class);
 	}
 
 	public void execute(TestContext context) throws Exception {

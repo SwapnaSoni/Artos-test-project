@@ -13,10 +13,10 @@ decription = "\nGIVEN : concat() function is used from Convert class"
            + "\nTHEN  : concanated byte[] should be returned"
 , preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
 //@formatter:on
-public class TEST_CONCAT implements TestExecutable {
+public class Test_concat implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, TEST_CONCAT.class);
+		onExecute(context, Test_concat.class);
 	}
 
 	public void execute(TestContext context) throws Exception {
@@ -26,7 +26,6 @@ public class TEST_CONCAT implements TestExecutable {
 		Convert _con = new Convert();
 
 		{
-			// public byte[] concat(byte[] first, byte[]... rest)
 			byte[] test1 = new byte[] { 0, 1, 2, 3, 4 };
 			byte[] test2 = new byte[] { 5, 6, 7, 8 };
 			byte[] test3 = new byte[] { 9 };
@@ -37,7 +36,6 @@ public class TEST_CONCAT implements TestExecutable {
 		}
 
 		{
-			// public byte[] concat(byte first, byte... rest)
 			byte test5 = 1;
 			byte test6 = 10;
 			byte test7 = (byte) 255;
@@ -48,7 +46,6 @@ public class TEST_CONCAT implements TestExecutable {
 		}
 
 		{
-			// public byte[] concat(byte[] byteArray, byte... rest)
 			byte[] test9 = { 0, 1, 2, 10, (byte) 255 };
 			byte test10 = 10;
 			byte test11 = (byte) 255;

@@ -14,7 +14,7 @@ public class Main {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
 
 		//--------------------------------------------------------------------------------------------
-		tests.add(new TEST_PROPERTIES_FILE_READER());
+		tests.add(new Test_properties_file_reader());
 		//--------------------------------------------------------------------------------------------
 
 		return tests;

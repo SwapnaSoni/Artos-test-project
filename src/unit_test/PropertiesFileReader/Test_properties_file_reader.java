@@ -21,10 +21,10 @@ decription = "\nGIVEN : PropertiesFileReader() object is used"
            + "\nTHEN  : value should be retruned from buffer"
 , preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
 //@formatter:on
-public class TEST_PROPERTIES_FILE_READER implements TestExecutable {
+public class Test_properties_file_reader implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, TEST_PROPERTIES_FILE_READER.class);
+		onExecute(context, Test_properties_file_reader.class);
 	}
 
 	public void execute(TestContext context) throws Exception {

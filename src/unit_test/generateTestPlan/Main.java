@@ -1,4 +1,4 @@
-package unit_test.Zip;
+package unit_test.generateTestPlan;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ public class Main {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
 
 		//--------------------------------------------------------------------------------------------
-		tests.add(new TEST_ZIP());
+		tests.add(new Test_generate_test_plan());
 		//--------------------------------------------------------------------------------------------
 
 		return tests;

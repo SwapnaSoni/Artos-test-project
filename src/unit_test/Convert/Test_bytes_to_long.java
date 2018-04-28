@@ -16,10 +16,10 @@ decription = "\nGIVEN : bytesToLong() function is used from Convert class"
            + "\nTHEN  : long formatted value should be returned"
 , preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
 //@formatter:on
-public class TEST_BYTES_TO_LONG implements TestExecutable {
+public class Test_bytes_to_long implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, TEST_BYTES_TO_LONG.class);
+		onExecute(context, Test_bytes_to_long.class);
 	}
 
 	public void execute(TestContext context) throws Exception {

@@ -18,10 +18,10 @@ decription = "\nGIVEN : Client and Server run in seperate Thread"
            + "\nTHEN  : They should be able to receive each others packets on local host"
 , preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
 //@formatter:on
-public class TEST_TCP_SERVER_CLIENT implements TestExecutable {
+public class Test_tcp_server_client implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, TEST_TCP_SERVER_CLIENT.class);
+		onExecute(context, Test_tcp_server_client.class);
 	}
 
 	public void execute(TestContext context) throws Exception {
