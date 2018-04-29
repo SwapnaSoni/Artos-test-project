@@ -1,21 +1,17 @@
 package tools.generateTestPlan;
 
-import java.util.ArrayList;
-
 import com.arpitos.framework.Runner;
 import com.arpitos.interfaces.TestExecutable;
-
-import unit_test.PrePostCycle;
-
+import java.util.ArrayList;
 
 public class Main {
 
 	public static ArrayList<TestExecutable> getTestList() {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
 
-		//--------------------------------------------------------------------------------------------
+		// --------------------------------------------------------------------------------------------
 		tests.add(new Test_generate_test_plan());
-		//--------------------------------------------------------------------------------------------
+		// --------------------------------------------------------------------------------------------
 
 		return tests;
 	}
