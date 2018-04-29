@@ -16,7 +16,7 @@ public class Test_generate_test_plan implements TestExecutable {
 
 		context.setKnownToFail(false, "Ticket-????");
 		// --------------------------------------------------------------------------------------------
-		GenerateTestPlan testPlan = new GenerateTestPlan(context, "unit_test.Covert");
+		GenerateTestPlan testPlan = new GenerateTestPlan(context, "unit_test.Convert");
 		// --------------------------------------------------------------------------------------------
 
 	}
