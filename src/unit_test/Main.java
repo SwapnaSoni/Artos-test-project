@@ -14,6 +14,7 @@ public class Main {
 		tests.addAll(unit_test.Convert.Main.getTestList());
 		tests.addAll(unit_test.CustomPrompt.Main.getTestList());
 		tests.addAll(unit_test.PropertiesFileReader.Main.getTestList());
+		tests.addAll(unit_test.ZipTar.Main.getTestList());
 		//--------------------------------------------------------------------------------------------
 
 		return tests;
