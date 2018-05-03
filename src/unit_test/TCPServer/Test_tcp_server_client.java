@@ -5,19 +5,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import com.arpitos.infra.TestContext;
-import com.arpitos.infra.annotation.Testcase;
+import com.arpitos.infra.annotation.TestCase;
+import com.arpitos.infra.annotation.TestPlan;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.TCPClient;
 import com.arpitos.utils.TCPServer;
 
-//@formatter:off
-@Testcase(skip = false, scenario = "Test_tcp_server_client",
-decription = "\nGIVEN : Client and Server run in seperate Thread"
-           + "\nAND   : Correct Port is set on both side"
-           + "\nWHEN  : Client and Server objects are executed"
-           + "\nTHEN  : They should be able to receive each others packets on local host"
-, preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
-//@formatter:on
+@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
+@TestCase(skip = false, sequence = 0, label = "all")
 public class Test_tcp_server_client implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
@@ -26,8 +21,7 @@ public class Test_tcp_server_client implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "");
-
+		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Thread t1 = new Thread(new Runnable() {
 			public void run() {

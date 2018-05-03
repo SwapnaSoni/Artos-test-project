@@ -6,17 +6,13 @@ import java.util.concurrent.CountDownLatch;
 import org.apache.logging.log4j.Logger;
 
 import com.arpitos.infra.TestContext;
-import com.arpitos.infra.annotation.Testcase;
+import com.arpitos.infra.annotation.TestCase;
+import com.arpitos.infra.annotation.TestPlan;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.CustomPrompt;
 
-//@formatter:off
-@Testcase(skip = false, scenario = "Test_countdown_timer",
-decription = "\nGIVEN : CustomPrompt() function is used from CustomPrompt class"
-           + "\nWHEN  : various constructor arguments are provided"
-           + "\nTHEN  : prompt behaves as per user expactation"
-, preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
-//@formatter:on
+@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
+@TestCase(skip = false, sequence = 0, label = "all")
 public class Test_countdown_timer implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
@@ -25,7 +21,7 @@ public class Test_countdown_timer implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "");
+		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Logger logger = context.getLogger();
 		long time = System.currentTimeMillis();

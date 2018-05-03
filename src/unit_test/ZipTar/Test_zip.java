@@ -5,21 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.arpitos.infra.TestContext;
-import com.arpitos.infra.annotation.Testcase;
+import com.arpitos.infra.annotation.TestCase;
+import com.arpitos.infra.annotation.TestPlan;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Guardian;
 import com.arpitos.utils.Utils;
 import com.arpitos.utils.UtilsZip;
 
-// @formatter:off
-@Testcase(skip=false, scenario = "Test_zip",
-decription = "\nGIVEN : "
-           + "\nAND   : "
-           + "\nWHEN  : "
-           + "\nAND   : "
-           + "\nTHEN  : "
-, preparedBy = "arpit", preparationDate = "28/04/2018", reviewedBy = "", reviewDate = "")
-// @formatter:on
+@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
+@TestCase(skip = false, sequence = 0, label = "all")
 public class Test_zip implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
@@ -28,7 +22,7 @@ public class Test_zip implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "");
+		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// Clean dir before start of the test
 		Utils.cleanDir(new File("./assets/ZipTar/resultzip"), true);

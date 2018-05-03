@@ -1,18 +1,14 @@
 package unit_test.Convert;
 
 import com.arpitos.infra.TestContext;
-import com.arpitos.infra.annotation.Testcase;
+import com.arpitos.infra.annotation.TestCase;
+import com.arpitos.infra.annotation.TestPlan;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
 
-//@formatter:off
-@Testcase(skip = false, scenario = "Test_concat",
-decription = "\nGIVEN : concat() function is used from Convert class"
-           + "\nWHEN  : valid byte or byte[] is provided as an argument"
-           + "\nTHEN  : concanated byte[] should be returned"
-, preparedBy = "arpit", preparationDate = "8/04/2018", reviewedBy = "", reviewDate = "")
-//@formatter:on
+@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
+@TestCase(skip = false, sequence = 0, label = "all")
 public class Test_concat implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
@@ -21,7 +17,7 @@ public class Test_concat implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "");
+		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Convert _con = new Convert();
 
@@ -55,5 +51,6 @@ public class Test_concat implements TestExecutable {
 			Guardian.guardEquals("Concatenated Byte Array", expectedResult2, resultArray2);
 		}
 		// --------------------------------------------------------------------------------------------
+
 	}
 }

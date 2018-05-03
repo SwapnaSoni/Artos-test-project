@@ -5,20 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.arpitos.infra.TestContext;
-import com.arpitos.infra.annotation.Testcase;
+import com.arpitos.infra.annotation.TestCase;
+import com.arpitos.infra.annotation.TestPlan;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Utils;
 import com.arpitos.utils.UtilsTar;
 
-// @formatter:off
-@Testcase(skip=false, scenario = "Test_tar",
-decription = "\nGIVEN : "
-           + "\nAND   : "
-           + "\nWHEN  : "
-           + "\nAND   : "
-           + "\nTHEN  : "
-, preparedBy = "arpit", preparationDate = "28/04/2018", reviewedBy = "", reviewDate = "")
-// @formatter:on
+@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
+@TestCase(skip = false, sequence = 0, label = "all")
 public class Test_tar implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {
@@ -27,16 +21,16 @@ public class Test_tar implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "");
+		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// Clean dir before start of the test
 		Utils.cleanDir(new File("./assets/ZipTar/resulttar"), true);
 		File tarFile = new File("./assets/ZipTar/Arpitos.tar");
 
-//		 Check if it is Tar
-//		boolean result = UtilTar.isTarFile(zipFile);
-//		Guardian.guardEquals("Tar or not Tar", true, result);
-//		System.out.println("File is a Tar File :" + tarFile);
+		// Check if it is Tar
+		// boolean result = UtilTar.isTarFile(zipFile);
+		// Guardian.guardEquals("Tar or not Tar", true, result);
+		// System.out.println("File is a Tar File :" + tarFile);
 
 		// Untar dir
 		File destDir = new File("./assets/ZipTar/resulttar/unzip");
