@@ -5,9 +5,9 @@ import java.util.concurrent.CountDownLatch;
 
 import org.apache.logging.log4j.Logger;
 
-import com.arpitos.infra.TestContext;
-import com.arpitos.infra.annotation.TestCase;
-import com.arpitos.infra.annotation.TestPlan;
+import com.arpitos.annotation.TestCase;
+import com.arpitos.annotation.TestPlan;
+import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.CustomPrompt;
 

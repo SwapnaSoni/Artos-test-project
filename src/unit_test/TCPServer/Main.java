@@ -1,9 +1,10 @@
 package unit_test.TCPServer;
 
 import java.util.ArrayList;
-import com.arpitos.framework.Runner;
-import com.arpitos.infra.annotation.ScanTestSuitUsingReflection;
-import com.arpitos.infra.TestContext;
+
+import com.arpitos.framework.ScanTestSuit;
+import com.arpitos.framework.infra.Runner;
+import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.PrePostRunnable;
 import com.arpitos.interfaces.TestExecutable;
 
@@ -20,7 +21,7 @@ public class Main implements PrePostRunnable {
 
 		// User can rely on reflection to populate test cases
 		if (tests.isEmpty()) {
-			tests = (ArrayList<TestExecutable>) new ScanTestSuitUsingReflection("unit_test.TCPServer").getTestList(true, true);
+			tests = (ArrayList<TestExecutable>) new ScanTestSuit("unit_test.TCPServer").getTestList(true, true);
 		}
 		return tests;
 	}

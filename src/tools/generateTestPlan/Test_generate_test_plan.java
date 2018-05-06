@@ -1,9 +1,9 @@
 package tools.generateTestPlan;
 
-import com.arpitos.infra.TestContext;
-import com.arpitos.infra.annotation.ScanTestSuitUsingReflection;
-import com.arpitos.infra.annotation.TestPlan;
-import com.arpitos.infra.annotation.TestCase;
+import com.arpitos.annotation.TestCase;
+import com.arpitos.annotation.TestPlan;
+import com.arpitos.framework.ScanTestSuit;
+import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "29/04/2018", reviewedBy = "", reviewDate = "")
@@ -18,7 +18,7 @@ public class Test_generate_test_plan implements TestExecutable {
 
 		context.setKnownToFail(false, "Ticket-????");
 		// --------------------------------------------------------------------------------------------
-		ScanTestSuitUsingReflection testPlan = new ScanTestSuitUsingReflection("unit_test.Convert");
+		ScanTestSuit testPlan = new ScanTestSuit("unit_test.Convert");
 		testPlan.generateTestPlan(context);
 		// --------------------------------------------------------------------------------------------
 

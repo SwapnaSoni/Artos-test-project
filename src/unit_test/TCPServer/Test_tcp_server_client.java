@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import com.arpitos.infra.TestContext;
-import com.arpitos.infra.annotation.TestCase;
-import com.arpitos.infra.annotation.TestPlan;
+import com.arpitos.annotation.TestCase;
+import com.arpitos.annotation.TestPlan;
+import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.TCPClient;
 import com.arpitos.utils.TCPServer;
