@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import com.arpitos.framework.ScanTestSuit;
 import com.arpitos.framework.infra.Runner;
-import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.PrePostRunnable;
 import com.arpitos.interfaces.TestExecutable;
 
@@ -28,26 +27,6 @@ public class Main implements PrePostRunnable {
 
 	public static void main(String[] args) throws Exception {
 		Runner.run(getTestList(), Main.class, "SN-1234", 1);
-	}
-
-	@Override
-	public void beforeTest(TestContext context) throws Exception {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void afterTest(TestContext context) throws Exception {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void beforeTestsuit(TestContext context) throws Exception {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void afterTestsuit(TestContext context) throws Exception {
-		// TODO Auto-generated method stub
 	}
 
 }

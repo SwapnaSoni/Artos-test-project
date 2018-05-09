@@ -30,24 +30,4 @@ public class Main implements PrePostRunnable {
 		Runner.run(getTestList(), Main.class, "SN-1234", 1);
 	}
 
-	@Override
-	public void beforeTest(TestContext context) throws Exception {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void afterTest(TestContext context) throws Exception {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void beforeTestsuit(TestContext context) throws Exception {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void afterTestsuit(TestContext context) throws Exception {
-		// TODO Auto-generated method stub
-	}
-
 }
