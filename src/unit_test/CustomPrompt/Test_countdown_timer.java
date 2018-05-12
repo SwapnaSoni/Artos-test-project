@@ -12,7 +12,7 @@ import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.CustomPrompt;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
-@TestCase(skip = false, sequence = 0, label = "all")
+@TestCase(skip = false, sequence = 0, label = "all:semiautomated")
 public class Test_countdown_timer implements TestExecutable {
 
 	public void onExecute(TestContext context) throws Exception {

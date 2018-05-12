@@ -1,4 +1,4 @@
-package unit_test.Convert;
+package unit_test.UtilsString;
 
 import java.util.ArrayList;
 import com.arpitos.framework.ScanTestSuit;
@@ -19,7 +19,7 @@ public class Main implements PrePostRunnable {
 
 		// User can rely on reflection to populate test cases
 		if (tests.isEmpty()) {
-			tests = (ArrayList<TestExecutable>) new ScanTestSuit("unit_test.Convert").getTestList(true, true);
+			tests = (ArrayList<TestExecutable>) new ScanTestSuit("unit_test.UtilsString").getTestList(true, true);
 		}
 		return tests;
 	}

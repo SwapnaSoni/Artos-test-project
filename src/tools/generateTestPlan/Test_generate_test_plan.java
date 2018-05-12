@@ -1,5 +1,7 @@
 package tools.generateTestPlan;
 
+import org.apache.logging.log4j.core.Logger;
+
 import com.arpitos.annotation.TestCase;
 import com.arpitos.annotation.TestPlan;
 import com.arpitos.framework.ScanTestSuit;
@@ -19,7 +21,13 @@ public class Test_generate_test_plan implements TestExecutable {
 		context.setKnownToFail(false, "Ticket-????");
 		// --------------------------------------------------------------------------------------------
 		ScanTestSuit testPlan = new ScanTestSuit("unit_test.Convert");
-		testPlan.generateTestPlan(context);
+		Logger logger = context.getLogger();
+
+		logger.info("\nTest Plan : ");
+		logger.info(testPlan.getTestPlan(context));
+
+		logger.info("\nTest Labels : ");
+		logger.info(testPlan.getTestLabelsToPrint(context));
 		// --------------------------------------------------------------------------------------------
 
 	}
