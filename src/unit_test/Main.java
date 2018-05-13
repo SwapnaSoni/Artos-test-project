@@ -18,7 +18,10 @@ public class Main implements PrePostRunnable {
 		// tests.add(new Test_abc());
 		tests.addAll(unit_test.Convert.Main.getTestList());
 		tests.addAll(unit_test.CustomPrompt.Main.getTestList());
+		tests.addAll(unit_test.Guardian.Main.getTestList());
 		tests.addAll(unit_test.PropertiesFileReader.Main.getTestList());
+		tests.addAll(unit_test.Tree.Main.getTestList());
+		tests.addAll(unit_test.UtilsString.Main.getTestList());
 		tests.addAll(unit_test.ZipTar.Main.getTestList());
 		// --------------------------------------------------------------------------------------------
 

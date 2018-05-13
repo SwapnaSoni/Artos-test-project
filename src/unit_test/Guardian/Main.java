@@ -8,7 +8,7 @@ import com.arpitos.interfaces.TestExecutable;
 
 public class Main implements PrePostRunnable {
 
-	public static ArrayList<TestExecutable> getTestList() throws Throwable {
+	public static ArrayList<TestExecutable> getTestList() throws Exception {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
 
 		// --------------------------------------------------------------------------------------------
