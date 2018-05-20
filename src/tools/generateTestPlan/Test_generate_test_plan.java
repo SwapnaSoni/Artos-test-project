@@ -1,14 +1,14 @@
 package tools.generateTestPlan;
 
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.Logger;
 
 import com.arpitos.annotation.TestCase;
 import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.ScanTestSuit;
+import com.arpitos.framework.ScanTestSuite;
 import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
 
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "29/04/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "20/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_generate_test_plan implements TestExecutable {
 
@@ -18,9 +18,9 @@ public class Test_generate_test_plan implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "Ticket-????");
+		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
-		ScanTestSuit testPlan = new ScanTestSuit("unit_test.Convert");
+		ScanTestSuite testPlan = new ScanTestSuite("unit_test.Convert");
 		Logger logger = context.getLogger();
 
 		logger.info("\nTest Plan : ");

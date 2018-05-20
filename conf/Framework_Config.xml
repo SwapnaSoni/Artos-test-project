@@ -13,6 +13,7 @@
 		<!--LogLevel Options : info:debug:trace:fatal:warn:all -->
 		<property name="logLevel">debug</property>
 		<property name="logRootDir">./reporting/</property>
+		<property name="logSubDir">SN-123/</property>
 		<property name="enableLogDecoration">false</property>
 		<property name="enableTextLog">true</property>
 		<property name="enableHTMLLog">false</property>

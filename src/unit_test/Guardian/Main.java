@@ -1,7 +1,7 @@
 package unit_test.Guardian;
 
 import java.util.ArrayList;
-import com.arpitos.framework.ScanTestSuit;
+import com.arpitos.framework.ScanTestSuite;
 import com.arpitos.framework.infra.Runner;
 import com.arpitos.interfaces.PrePostRunnable;
 import com.arpitos.interfaces.TestExecutable;
@@ -19,13 +19,13 @@ public class Main implements PrePostRunnable {
 
 		// User can rely on reflection to populate test cases
 		if (tests.isEmpty()) {
-			tests = (ArrayList<TestExecutable>) new ScanTestSuit("unit_test.Guardian").getTestList(true, true);
+			tests = (ArrayList<TestExecutable>) new ScanTestSuite("unit_test.Guardian").getTestList(true, true);
 		}
 		return tests;
 	}
 
 	public static void main(String[] args) throws Throwable {
-		Runner.run(getTestList(), Main.class, "SN-1234", 1);
+		Runner.run(args, getTestList(), Main.class, 1);
 	}
 
 }

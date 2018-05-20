@@ -8,7 +8,7 @@ import com.arpitos.annotation.TestCase;
 import com.arpitos.annotation.TestPlan;
 import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.Utils;
+import com.arpitos.utils.FWUtils;
 import com.arpitos.utils.UtilsTar;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
@@ -24,7 +24,7 @@ public class Test_tar implements TestExecutable {
 		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// Clean dir before start of the test
-		Utils.cleanDir(new File("./assets/ZipTar/resulttar"), true);
+		FWUtils.cleanDir(new File("./assets/ZipTar/resulttar"), true);
 		File tarFile = new File("./assets/ZipTar/Arpitos.tar");
 
 		// Check if it is Tar

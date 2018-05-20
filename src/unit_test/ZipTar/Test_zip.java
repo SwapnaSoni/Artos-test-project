@@ -8,8 +8,8 @@ import com.arpitos.annotation.TestCase;
 import com.arpitos.annotation.TestPlan;
 import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
+import com.arpitos.utils.FWUtils;
 import com.arpitos.utils.Guardian;
-import com.arpitos.utils.Utils;
 import com.arpitos.utils.UtilsZip;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
@@ -25,7 +25,7 @@ public class Test_zip implements TestExecutable {
 		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// Clean dir before start of the test
-		Utils.cleanDir(new File("./assets/ZipTar/resultzip"), true);
+		FWUtils.cleanDir(new File("./assets/ZipTar/resultzip"), true);
 		File zipFile = new File("./assets/ZipTar/Arpitos.zip");
 
 		// Check if it is Zip

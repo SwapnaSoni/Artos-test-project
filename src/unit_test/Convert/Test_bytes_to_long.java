@@ -45,7 +45,7 @@ public class Test_bytes_to_long implements TestExecutable {
 				_con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
 
 				context.getLogger().info("Did not expect to reach here");
-				context.setCurrentTestStatus(TestStatus.FAIL);
+				context.setTestStatus(TestStatus.FAIL);
 			} catch (BufferOverflowException e) {
 				context.getLogger().info("Exception is as expected : BufferOverflowException");
 			}

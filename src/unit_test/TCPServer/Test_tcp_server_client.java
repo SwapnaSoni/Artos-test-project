@@ -77,7 +77,7 @@ public class Test_tcp_server_client implements TestExecutable {
 			server.connect();
 			boolean continueRun = true;
 			while (continueRun) {
-				server.sendData("Hi from Server");
+				server.sendMsg("Hi from Server");
 				List<Byte> expectedlist = new ArrayList<>();
 				boolean keepPolling = true;
 				while (keepPolling) {
