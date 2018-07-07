@@ -1,7 +1,6 @@
-package unit_test.Tree;
+package unit_test.udpconnector;
 
 import java.util.ArrayList;
-
 import com.arpitos.framework.ScanTestSuite;
 import com.arpitos.framework.infra.Runner;
 import com.arpitos.interfaces.PrePostRunnable;
@@ -20,7 +19,7 @@ public class Main implements PrePostRunnable {
 
 		// User can rely on reflection to populate test cases
 		if (tests.isEmpty()) {
-			tests = (ArrayList<TestExecutable>) new ScanTestSuite("unit_test.Tree").getTestList(true, true);
+			tests = (ArrayList<TestExecutable>) new ScanTestSuite("unit_test.udpconnector").getTestList(true, true);
 		}
 		return tests;
 	}

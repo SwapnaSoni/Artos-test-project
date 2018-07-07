@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import com.arpitos.framework.ScanTestSuite;
 import com.arpitos.framework.infra.Runner;
-import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.PrePostRunnable;
 import com.arpitos.interfaces.TestExecutable;
 
@@ -27,7 +26,8 @@ public class Main implements PrePostRunnable {
 	}
 
 	public static void main(String[] args) throws Exception {
-		Runner.run(args, getTestList(), Main.class, 1);
+		Runner runner = new Runner(Main.class);
+		runner.run(args, getTestList(), 1);
 	}
 
 }

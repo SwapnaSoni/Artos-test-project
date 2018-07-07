@@ -27,12 +27,12 @@ public class Test_bytes_to_long implements TestExecutable {
 
 		{
 			// public long bytesToLong(byte[] bytes, ByteOrder bo)
-			byte[] test1 = _con.stringHexToByteArray("0D E0 B6 B3 A7 63 FF FF");
+			byte[] test1 = _con.strHexToByteArray("0D E0 B6 B3 A7 63 FF FF");
 			long expectedResult1 = 999999999999999999l;
 			Long resultArray1 = _con.bytesToLong(test1, ByteOrder.BIG_ENDIAN);
 			Guardian.guardEquals("Bytes To Long Big Endian", expectedResult1, resultArray1);
 
-			byte[] test2 = _con.stringHexToByteArray("FF FF 63 A7 B3 B6 E0 0D");
+			byte[] test2 = _con.strHexToByteArray("FF FF 63 A7 B3 B6 E0 0D");
 			long expectedResult2 = 999999999999999999l;
 			Long resultArray2 = _con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
 			Guardian.guardEquals("Bytes To Long Big Endian", expectedResult2, resultArray2);
@@ -41,7 +41,7 @@ public class Test_bytes_to_long implements TestExecutable {
 		{
 			// bad path with extra byte
 			try {
-				byte[] test2 = _con.stringHexToByteArray("FF FF 63 A7 B3 B6 E0 0D 01");
+				byte[] test2 = _con.strHexToByteArray("FF FF 63 A7 B3 B6 E0 0D 01");
 				_con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
 
 				context.getLogger().info("Did not expect to reach here");
@@ -53,7 +53,7 @@ public class Test_bytes_to_long implements TestExecutable {
 
 		{
 			// bad path with value larger than 9,99,99,99,99,99,99,99,999
-			byte[] test2 = _con.stringHexToByteArray("FF FF FF FF FF FF FF FF");
+			byte[] test2 = _con.strHexToByteArray("FF FF FF FF FF FF FF FF");
 			_con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
 		}
 		// --------------------------------------------------------------------------------------------

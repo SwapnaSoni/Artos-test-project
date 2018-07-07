@@ -25,7 +25,8 @@ public class Main implements PrePostRunnable {
 	}
 
 	public static void main(String[] args) throws Exception {
-		Runner.run(args, getTestList(), Main.class, 1);
+		Runner runner = new Runner(Main.class);
+		runner.run(args, getTestList(), 1);
 	}
 
 }
