@@ -3,10 +3,9 @@ package unit_test.PropertiesFileReader;
 import java.io.File;
 import java.util.HashMap;
 
-import org.apache.logging.log4j.Logger;
-
 import com.arpitos.annotation.TestCase;
 import com.arpitos.annotation.TestPlan;
+import com.arpitos.framework.infra.LogWrapper;
 import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.PropertiesFileReader;
@@ -15,15 +14,11 @@ import com.arpitos.utils.PropertiesFileReader;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_properties_file_reader implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_properties_file_reader.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
-		Logger logger = context.getLogger();
+		LogWrapper logger = context.getLogger();
 
 		File file = new File("./assets/properties/test.properties");
 		PropertiesFileReader propReader = new PropertiesFileReader(file);

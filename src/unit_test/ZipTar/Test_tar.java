@@ -15,10 +15,6 @@ import com.arpitos.utils.UtilsTar;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_tar implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_tar.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");

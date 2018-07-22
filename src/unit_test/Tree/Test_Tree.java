@@ -12,10 +12,6 @@ import com.arpitos.utils.Tree;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_Tree implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_Tree.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");

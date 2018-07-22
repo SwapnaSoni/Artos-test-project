@@ -16,10 +16,6 @@ import com.arpitos.utils.UDP;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_UDP_Connector implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_UDP_Connector.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");

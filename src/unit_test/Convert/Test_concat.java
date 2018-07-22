@@ -11,10 +11,6 @@ import com.arpitos.utils.Guardian;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_concat implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_concat.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");

@@ -11,10 +11,6 @@ import com.arpitos.utils.UtilsString;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_WildCardMatch implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_WildCardMatch.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");

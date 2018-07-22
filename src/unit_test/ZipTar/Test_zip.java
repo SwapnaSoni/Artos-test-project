@@ -16,10 +16,6 @@ import com.arpitos.utils.UtilsZip;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_zip implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_zip.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");

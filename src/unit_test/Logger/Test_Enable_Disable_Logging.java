@@ -9,10 +9,6 @@ import com.arpitos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_Enable_Disable_Logging implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_Enable_Disable_Logging.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");
@@ -23,13 +19,13 @@ public class Test_Enable_Disable_Logging implements TestExecutable {
 		}
 
 		// log should stop printing
-		context.getOrganiseLogger().disableGeneralLog();
+		context.getLogger().disableGeneralLog();
 		for (int i = 11; i < 20; i++) {
 			context.getLogger().info(i);
 		}
 
 		// log should be enabled again
-		context.getOrganiseLogger().enableGeneralLog();
+		context.getLogger().enableGeneralLog();
 		for (int i = 21; i < 30; i++) {
 			context.getLogger().info(i);
 		}

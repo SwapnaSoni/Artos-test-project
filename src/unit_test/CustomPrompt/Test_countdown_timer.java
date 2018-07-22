@@ -3,10 +3,9 @@ package unit_test.CustomPrompt;
 import java.io.File;
 import java.util.concurrent.CountDownLatch;
 
-import org.apache.logging.log4j.Logger;
-
 import com.arpitos.annotation.TestCase;
 import com.arpitos.annotation.TestPlan;
+import com.arpitos.framework.infra.LogWrapper;
 import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.CustomPrompt;
@@ -15,15 +14,11 @@ import com.arpitos.utils.CustomPrompt;
 @TestCase(skip = false, sequence = 0, label = "all:semiautomated")
 public class Test_countdown_timer implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_countdown_timer.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
-		Logger logger = context.getLogger();
+		LogWrapper logger = context.getLogger();
 		long time = System.currentTimeMillis();
 
 		// Countdown time blocking

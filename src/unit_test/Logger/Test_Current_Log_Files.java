@@ -12,17 +12,13 @@ import com.arpitos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_Current_Log_Files implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_Current_Log_Files.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
-		List<File> logFiles = context.getOrganiseLogger().getCurrentGeneralLogFiles();
-		List<File> errorlogFiles = context.getOrganiseLogger().getCurrentErrorLogFiles();
-		List<File> summarylogFiles = context.getOrganiseLogger().getCurrentSummaryLogFiles();
+		List<File> logFiles = context.getLogger().getCurrentGeneralLogFiles();
+		List<File> errorlogFiles = context.getLogger().getCurrentErrorLogFiles();
+		List<File> summarylogFiles = context.getLogger().getCurrentSummaryLogFiles();
 
 		for (int i = 0; i < logFiles.size(); i++) {
 			context.getLogger().info(logFiles.get(i));

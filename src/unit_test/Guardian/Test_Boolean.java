@@ -10,10 +10,6 @@ import com.arpitos.utils.Guardian;
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_Boolean implements TestExecutable {
 
-	public void onExecute(TestContext context) throws Exception {
-		onExecute(context, Test_Boolean.class);
-	}
-
 	public void execute(TestContext context) throws Exception {
 
 		context.setKnownToFail(false, "JIRA-????");
