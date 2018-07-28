@@ -13,7 +13,6 @@ public class Test_WildCardMatch implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		String str = "THISisArpitos_Test12345@#$%";
 
@@ -29,8 +28,7 @@ public class Test_WildCardMatch implements TestExecutable {
 		Guardian.guardEquals("WildCardMatch", false, UtilsString.wildCardMatch(str, pattern));
 		pattern = "*z*";
 		Guardian.guardEquals("WildCardMatch", false, UtilsString.wildCardMatch(str, pattern));
-		
-		
+
 		pattern = "*Arpitos*";
 		Guardian.guardEquals("WildCardMatch", true, UtilsString.wildCardMatch(str, pattern));
 		pattern = "THIS*";

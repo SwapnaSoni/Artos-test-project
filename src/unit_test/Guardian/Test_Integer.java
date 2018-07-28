@@ -12,7 +12,6 @@ public class Test_Integer implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Guardian.guardEquals("Test isEqual() works", true, Guardian.isEquals(123, 123));
 		Guardian.guardEquals("Test isEqual() works", true, Guardian.isEquals(Integer.MAX_VALUE, Integer.MAX_VALUE));

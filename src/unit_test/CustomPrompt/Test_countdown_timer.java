@@ -16,7 +16,6 @@ public class Test_countdown_timer implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		LogWrapper logger = context.getLogger();
 		long time = System.currentTimeMillis();

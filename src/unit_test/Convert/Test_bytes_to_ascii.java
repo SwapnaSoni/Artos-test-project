@@ -8,12 +8,11 @@ import com.arpitos.utils.Convert;
 import com.arpitos.utils.Guardian;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
-@TestCase(skip = false, sequence = 0, label = "all")
+@TestCase(skip = true, sequence = 0, label = "all")
 public class Test_bytes_to_ascii implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Convert _con = new Convert();
 

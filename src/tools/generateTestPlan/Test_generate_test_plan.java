@@ -13,7 +13,6 @@ public class Test_generate_test_plan implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		ScanTestSuite testPlan = new ScanTestSuite("unit_test.Convert");
 		LogWrapper logger = context.getLogger();

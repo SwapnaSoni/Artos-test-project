@@ -1,11 +1,9 @@
 package unit_test.Convert;
 
-import java.nio.BufferOverflowException;
 import java.nio.ByteOrder;
 
 import com.arpitos.annotation.TestCase;
 import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.Enums.TestStatus;
 import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
 import com.arpitos.utils.Convert;
@@ -17,7 +15,6 @@ public class Test_bytes_to_long implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Convert _con = new Convert();
 
@@ -35,16 +32,10 @@ public class Test_bytes_to_long implements TestExecutable {
 		}
 
 		{
-			// bad path with extra byte
-			try {
-				byte[] test2 = _con.strHexToByteArray("FF FF 63 A7 B3 B6 E0 0D 01");
-				_con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
-
-				context.getLogger().info("Did not expect to reach here");
-				context.setTestStatus(TestStatus.FAIL);
-			} catch (BufferOverflowException e) {
-				context.getLogger().info("Exception is as expected : BufferOverflowException");
-			}
+			// bad path with extra byte, should only take first 8 bytes into
+			// consideration
+			byte[] test2 = _con.strHexToByteArray("FF FF 63 A7 B3 B6 E0 0D 01");
+			_con.bytesToLong(test2, ByteOrder.LITTLE_ENDIAN);
 		}
 
 		{

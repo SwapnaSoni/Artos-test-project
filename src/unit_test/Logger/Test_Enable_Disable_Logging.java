@@ -11,7 +11,6 @@ public class Test_Enable_Disable_Logging implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// log enabled by default
 		for (int i = 0; i < 10; i++) {

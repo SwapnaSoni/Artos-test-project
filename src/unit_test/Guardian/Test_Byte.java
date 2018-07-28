@@ -12,7 +12,6 @@ public class Test_Byte implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Guardian.guardEquals("Test isEqual() works", true, Guardian.isEquals((byte) 0x01, (byte) 0x01));
 		Guardian.guardEquals("Test isEqual() works", true, Guardian.isEquals((byte) 0xFF, (byte) 0xFF));

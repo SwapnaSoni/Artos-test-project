@@ -18,7 +18,6 @@ public class Test_zip implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// Clean dir before start of the test
 		UtilsFile.cleanDir(new File("./assets/ZipTar/resultzip"), true);

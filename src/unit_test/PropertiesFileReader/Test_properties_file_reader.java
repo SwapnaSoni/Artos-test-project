@@ -16,7 +16,6 @@ public class Test_properties_file_reader implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		LogWrapper logger = context.getLogger();
 

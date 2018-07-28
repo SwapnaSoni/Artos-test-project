@@ -12,7 +12,6 @@ public class Test_Long implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Guardian.guardEquals("Test isEqual() works", true, Guardian.isEquals(123l, 123));
 		Guardian.guardEquals("Test isEqual() works", true, Guardian.isEquals(Long.MAX_VALUE, Long.MAX_VALUE));

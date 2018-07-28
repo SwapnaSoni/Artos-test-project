@@ -18,7 +18,6 @@ public class Test_UDP_Connector implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// Launch UDP server with filter in seperate thread
 		Thread t = new Thread(new UDPTest(context));

@@ -1,21 +1,20 @@
-package unit_test.Tree;
+package unit_test.KTFAttribute;
 
-import java.io.File;
-
+import com.arpitos.annotation.KnownToFail;
 import com.arpitos.annotation.TestCase;
 import com.arpitos.annotation.TestPlan;
 import com.arpitos.framework.infra.TestContext;
 import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.Tree;
 
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "12/05/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "28/07/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
-public class Test_Tree implements TestExecutable {
+@KnownToFail(ktf=true, bugref="JIRA-????")
+public class Test_KTF_Attribute implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		context.getLogger().info(Tree.printDirectoryTree(new File(".")));
+		context.getLogger().info("Check log to ensure this test is marked as failed");
 		// --------------------------------------------------------------------------------------------
 
 	}

@@ -12,7 +12,6 @@ public class Test_Logger implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		LogWrapper logger = context.getLogger();
 		// Single line

@@ -21,7 +21,6 @@ public class Test_tcp_server_client implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// Check send receive works between server and client
 		Test_Server_Client_Communication(context);

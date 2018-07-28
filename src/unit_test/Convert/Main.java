@@ -29,5 +29,4 @@ public class Main implements PrePostRunnable {
 		Runner runner = new Runner(Main.class);
 		runner.run(args, getTestList(), 1);
 	}
-
 }

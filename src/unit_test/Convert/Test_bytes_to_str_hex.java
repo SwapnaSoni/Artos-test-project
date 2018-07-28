@@ -13,7 +13,6 @@ public class Test_bytes_to_str_hex implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Convert _con = new Convert();
 

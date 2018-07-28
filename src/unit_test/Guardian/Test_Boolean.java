@@ -12,7 +12,6 @@ public class Test_Boolean implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// guardTrue(), guardFalse() and isEquals()
 		Guardian.guardTrue("Test guardTrue() works", Guardian.isEquals(true, true));

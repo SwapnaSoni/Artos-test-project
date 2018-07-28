@@ -17,7 +17,6 @@ public class Test_tar implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		// Clean dir before start of the test
 		UtilsFile.cleanDir(new File("./assets/ZipTar/resulttar"), true);

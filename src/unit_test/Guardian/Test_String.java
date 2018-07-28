@@ -12,7 +12,6 @@ public class Test_String implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		Guardian.guardEquals("Test String isEqual() works", true, Guardian.isEquals("ABCD", "ABCD"));
 		Guardian.guardEquals("Test String isEqual() works", false, Guardian.isEquals("ABCDE", "ABCD"));

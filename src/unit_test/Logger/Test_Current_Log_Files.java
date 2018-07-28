@@ -14,7 +14,6 @@ public class Test_Current_Log_Files implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
-		context.setKnownToFail(false, "JIRA-????");
 		// --------------------------------------------------------------------------------------------
 		List<File> logFiles = context.getLogger().getCurrentGeneralLogFiles();
 		List<File> errorlogFiles = context.getLogger().getCurrentErrorLogFiles();
