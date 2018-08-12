@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.ConnectableFilter;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.Convert;
-import com.arpitos.utils.UDP;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.ConnectableFilter;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.Transform;
+import com.artos.utils.UDP;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "7/07/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
@@ -26,11 +26,11 @@ public class Test_UDP_Connector implements TestExecutable {
 		// Launch UDP server with no filter
 		UDP server2 = new UDP("127.0.0.1", 2345, "127.0.0.1", 1234);
 		server2.connect();
-		Convert _con = new Convert();
+		Transform _tfm = new Transform();
 		while (true) {
-			server2.sendMsg(_con.strHexToByteArray("31 32 33 34"));
+			server2.sendMsg(_tfm.strHexToByteArray("31 32 33 34"));
 			Thread.sleep(100);
-			server2.sendMsg(_con.strHexToByteArray("32 31 31 31"));
+			server2.sendMsg(_tfm.strHexToByteArray("32 31 31 31"));
 			Thread.sleep(100);
 		}
 
@@ -69,11 +69,11 @@ class UDPTest implements Runnable {
 			// Launch UDP server
 			UDP server1 = new UDP("127.0.0.1", 1234, "127.0.0.1", 2345, filterList);
 			server1.connect();
-			Convert _con = new Convert();
+			Transform _tfm = new Transform();
 			while (true) {
 				byte[] data = server1.getNextMsg(2000, TimeUnit.MILLISECONDS);
 				if (null != data) {
-					context.getLogger().info(_con.bytesToHexString(data));
+					context.getLogger().info(_tfm.bytesToHexString(data));
 					server1.sendMsg("Hello How Are you");
 				}
 			}

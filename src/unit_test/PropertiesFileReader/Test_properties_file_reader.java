@@ -3,12 +3,12 @@ package unit_test.PropertiesFileReader;
 import java.io.File;
 import java.util.HashMap;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.LogWrapper;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.PropertiesFileReader;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.LogWrapper;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.PropertiesFileReader;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")

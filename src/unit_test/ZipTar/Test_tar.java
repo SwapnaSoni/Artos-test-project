@@ -4,12 +4,12 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.UtilsFile;
-import com.arpitos.utils.UtilsTar;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.UtilsFile;
+import com.artos.utils.UtilsTar;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
@@ -24,7 +24,7 @@ public class Test_tar implements TestExecutable {
 
 		// Check if it is Tar
 		// boolean result = UtilTar.isTarFile(zipFile);
-		// Guardian.guardEquals("Tar or not Tar", true, result);
+		// Guard.guardEquals(context, "Tar or not Tar", true, result);
 		// System.out.println("File is a Tar File :" + tarFile);
 
 		// Untar dir

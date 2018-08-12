@@ -2,10 +2,9 @@ package tools.generateTestPlan;
 
 import java.util.ArrayList;
 
-import com.arpitos.framework.ScanTestSuite;
-import com.arpitos.framework.infra.Runner;
-import com.arpitos.interfaces.PrePostRunnable;
-import com.arpitos.interfaces.TestExecutable;
+import com.artos.framework.infra.Runner;
+import com.artos.interfaces.PrePostRunnable;
+import com.artos.interfaces.TestExecutable;
 
 public class Main implements PrePostRunnable {
 
@@ -18,10 +17,6 @@ public class Main implements PrePostRunnable {
 		// tests.add(new Test_abc());
 		// --------------------------------------------------------------------------------------------
 
-		// User can rely on reflection to populate test cases
-		if (tests.isEmpty()) {
-			tests = (ArrayList<TestExecutable>) new ScanTestSuite("tools.generateTestPlan").getTestList(true, true);
-		}
 		return tests;
 	}
 

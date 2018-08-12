@@ -1,10 +1,10 @@
 package unit_test.Guardian;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.Guardian;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.Guard;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "13/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
@@ -13,26 +13,26 @@ public class Test_String implements TestExecutable {
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		Guardian.guardEquals("Test String isEqual() works", true, Guardian.isEquals("ABCD", "ABCD"));
-		Guardian.guardEquals("Test String isEqual() works", false, Guardian.isEquals("ABCDE", "ABCD"));
+		Guard.guardEquals(context, "Test String isEqual() works", true, Guard.isEquals("ABCD", "ABCD"));
+		Guard.guardEquals(context, "Test String isEqual() works", false, Guard.isEquals("ABCDE", "ABCD"));
 
-		Guardian.guardEquals("Test String isEqual() works", "ABC", "ABC");
-		Guardian.guardEquals("Test String isEqual() works", "ABC-123", "ABC-123");
+		Guard.guardEquals(context, "Test String isEqual() works", "ABC", "ABC");
+		Guard.guardEquals(context, "Test String isEqual() works", "ABC-123", "ABC-123");
 		try {
-			Guardian.guardEquals("Test guardTrue() works", "ABC", "123");
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardEquals(context, "Test guardTrue() works", "ABC", "123");
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardTrue() works values are not equal");
+			Guard.guardEquals(context, e, "Test guardTrue() works values are not equal");
 		}
 
-		Guardian.guardNotEquals("Test String isEqual() works", "ABC", "");
-		Guardian.guardNotEquals("Test String isEqual() works", "ABC", "ABCD");
-		Guardian.guardNotEquals("Test String isEqual() works", "ABC", "abc");
+		Guard.guardNotEquals(context, "Test String isEqual() works", "ABC", "");
+		Guard.guardNotEquals(context, "Test String isEqual() works", "ABC", "ABCD");
+		Guard.guardNotEquals(context, "Test String isEqual() works", "ABC", "abc");
 		try {
-			Guardian.guardNotEquals("Test guardTrue() works", "ABCD", "ABCD");
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardNotEquals(context, "Test guardTrue() works", "ABCD", "ABCD");
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardTrue() works values are equal");
+			Guard.guardEquals(context, e, "Test guardTrue() works values are equal");
 		}
 		// --------------------------------------------------------------------------------------------
 

@@ -1,10 +1,10 @@
 package unit_test.KTFAttribute;
 
-import com.arpitos.annotation.KnownToFail;
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.TestExecutable;
+import com.artos.annotation.KnownToFail;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.TestExecutable;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "28/07/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")

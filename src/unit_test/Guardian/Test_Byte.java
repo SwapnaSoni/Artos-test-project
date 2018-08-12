@@ -1,10 +1,10 @@
 package unit_test.Guardian;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.Guardian;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.Guard;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "13/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
@@ -13,37 +13,37 @@ public class Test_Byte implements TestExecutable {
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		Guardian.guardEquals("Test isEqual() works", true, Guardian.isEquals((byte) 0x01, (byte) 0x01));
-		Guardian.guardEquals("Test isEqual() works", true, Guardian.isEquals((byte) 0xFF, (byte) 0xFF));
-		Guardian.guardEquals("Test isEqual() works", true, Guardian.isEquals((byte) 0x00, (byte) 0x00));
-		Guardian.guardEquals("Test isEqual() works", false, Guardian.isEquals((byte) 0x01, (byte) 0x02));
+		Guard.guardEquals(context, "Test isEqual() works", true, Guard.isEquals((byte) 0x01, (byte) 0x01));
+		Guard.guardEquals(context, "Test isEqual() works", true, Guard.isEquals((byte) 0xFF, (byte) 0xFF));
+		Guard.guardEquals(context, "Test isEqual() works", true, Guard.isEquals((byte) 0x00, (byte) 0x00));
+		Guard.guardEquals(context, "Test isEqual() works", false, Guard.isEquals((byte) 0x01, (byte) 0x02));
 
-		Guardian.guardEquals("Test guardEquals() works", (byte) 0x00, (byte) 0x00);
-		Guardian.guardEquals("Test guardEquals() works", (byte) 0x01, (byte) 0x01);
-		Guardian.guardEquals("Test guardEquals() works", (byte) 0xFF, (byte) 0xFF);
+		Guard.guardEquals(context, "Test guardEquals() works", (byte) 0x00, (byte) 0x00);
+		Guard.guardEquals(context, "Test guardEquals() works", (byte) 0x01, (byte) 0x01);
+		Guard.guardEquals(context, "Test guardEquals() works", (byte) 0xFF, (byte) 0xFF);
 		try {
-			Guardian.guardEquals("Test guardEquals() works", (byte) 0xFA, (byte) 0xFF);
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardEquals(context, "Test guardEquals() works", (byte) 0xFA, (byte) 0xFF);
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardEquals() works values are not equal");
+			Guard.guardEquals(context, e, "Test guardEquals() works values are not equal");
 		}
 
-		Guardian.guardEquals("Test guardEquals() works", (byte) 0xFE, (byte) 0xFF, (byte) 0x05);
-		Guardian.guardEquals("Test guardEquals() works", (byte) 0x00, (byte) 0x05, (byte) 0x05);
+		Guard.guardEquals(context, "Test guardEquals() works", (byte) 0xFE, (byte) 0xFF, (byte) 0x05);
+		Guard.guardEquals(context, "Test guardEquals() works", (byte) 0x00, (byte) 0x05, (byte) 0x05);
 		try {
-			Guardian.guardEquals("Test guardEquals() works", (byte) 0xFA, (byte) 0xFF, (byte) 0x02);
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardEquals(context, "Test guardEquals() works", (byte) 0xFA, (byte) 0xFF, (byte) 0x02);
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardEquals() works values are not equal");
+			Guard.guardEquals(context, e, "Test guardEquals() works values are not equal");
 		}
 
-		Guardian.guardNotEquals("Test guardEquals() works", (byte) 0x00, (byte) 0x01);
-		Guardian.guardNotEquals("Test guardEquals() works", (byte) 0x01, (byte) 0xFF);
+		Guard.guardNotEquals(context, "Test guardEquals() works", (byte) 0x00, (byte) 0x01);
+		Guard.guardNotEquals(context, "Test guardEquals() works", (byte) 0x01, (byte) 0xFF);
 		try {
-			Guardian.guardNotEquals("Test guardEquals() works", (byte) 0xFF, (byte) 0xFF);
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardNotEquals(context, "Test guardEquals() works", (byte) 0xFF, (byte) 0xFF);
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardEquals() works values are equal");
+			Guard.guardEquals(context, e, "Test guardEquals() works values are equal");
 		}
 		// --------------------------------------------------------------------------------------------
 

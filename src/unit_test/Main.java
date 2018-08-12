@@ -2,10 +2,10 @@ package unit_test;
 
 import java.util.ArrayList;
 
-import com.arpitos.framework.ScanTestSuite;
-import com.arpitos.framework.infra.Runner;
-import com.arpitos.interfaces.PrePostRunnable;
-import com.arpitos.interfaces.TestExecutable;
+import com.artos.framework.ScanTestSuite;
+import com.artos.framework.infra.Runner;
+import com.artos.interfaces.PrePostRunnable;
+import com.artos.interfaces.TestExecutable;
 
 public class Main implements PrePostRunnable {
 

@@ -3,12 +3,12 @@ package unit_test.CustomPrompt;
 import java.io.File;
 import java.util.concurrent.CountDownLatch;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.LogWrapper;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.CustomPrompt;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.LogWrapper;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.CustomPrompt;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all:semiautomated")
@@ -27,7 +27,7 @@ public class Test_countdown_timer implements TestExecutable {
 		cntdwn1.setStr2("Button Text override : false");
 		cntdwn1.setStr3("Hide Buttons : False");
 		cntdwn1.setStr4("Image : Not Provided");
-		cntdwn1.Start();
+		cntdwn1.start();
 		cntdwnltch1.await();
 		logger.debug(Boolean.toString(cntdwn1.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn1.isButtonNoPressed()));
 
@@ -42,7 +42,7 @@ public class Test_countdown_timer implements TestExecutable {
 		cntdwn2.setStr2("Button Text override : true");
 		cntdwn2.setStr3("Hide Buttons : False");
 		cntdwn2.setStr4("Image : Not Provided");
-		cntdwn2.Start();
+		cntdwn2.start();
 		cntdwnltch2.await();
 		logger.debug(Boolean.toString(cntdwn2.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn2.isButtonNoPressed()));
 
@@ -56,7 +56,7 @@ public class Test_countdown_timer implements TestExecutable {
 		cntdwn3.setStr3("Hide Buttons : True");
 		cntdwn3.setStr4("Image : Not Provided");
 		cntdwn3.setHideButtons(true);
-		cntdwn3.Start();
+		cntdwn3.start();
 		cntdwnltch3.await();
 		logger.debug(Boolean.toString(cntdwn3.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn3.isButtonNoPressed()));
 
@@ -70,7 +70,7 @@ public class Test_countdown_timer implements TestExecutable {
 		cntdwn4.setStr2("Button Text override : false");
 		cntdwn4.setStr3("Hide Buttons : True");
 		cntdwn4.setStr4("Image : Provided");
-		cntdwn4.Start();
+		cntdwn4.start();
 		cntdwnltch4.await();
 		logger.debug(Boolean.toString(cntdwn4.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn4.isButtonNoPressed()));
 
@@ -83,7 +83,7 @@ public class Test_countdown_timer implements TestExecutable {
 		cntdwn5.setStr2("Stop GUI at anytime");
 		cntdwn5.setStr3("");
 		cntdwn5.setStr4("");
-		cntdwn5.Start();
+		cntdwn5.start();
 		Thread.sleep(5000);
 		cntdwn5.stop();
 		cntdwnltch5.await();
@@ -95,7 +95,7 @@ public class Test_countdown_timer implements TestExecutable {
 		cntdwn6.setStr2("Non-Blocking timer");
 		cntdwn6.setStr3("");
 		cntdwn6.setStr4("");
-		cntdwn6.Start();
+		cntdwn6.start();
 		logger.debug(Boolean.toString(cntdwn6.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn6.isButtonNoPressed()));
 
 		CountDownLatch cntdwnltch7 = new CountDownLatch(1);
@@ -105,7 +105,7 @@ public class Test_countdown_timer implements TestExecutable {
 		cntdwn7.setStr2("Non-Blocking timer");
 		cntdwn7.setStr3("");
 		cntdwn7.setStr4("");
-		cntdwn7.Start();
+		cntdwn7.start();
 		cntdwnltch7.await();
 		logger.debug(Boolean.toString(cntdwn6.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn6.isButtonNoPressed()));
 		logger.debug(Boolean.toString(cntdwn7.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn7.isButtonNoPressed()));

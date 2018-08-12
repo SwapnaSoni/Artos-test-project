@@ -6,14 +6,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.Enums.TestStatus;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.ConnectableFilter;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.TCPClient;
-import com.arpitos.utils.TCPServer;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.Enums.TestStatus;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.ConnectableFilter;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.TCPClient;
+import com.artos.utils.TCPServer;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
@@ -122,7 +122,7 @@ class RunClient implements Runnable {
 				List<Byte> expectedlist = new ArrayList<>();
 				boolean keepPolling = true;
 				while (keepPolling) {
-					byte[] temp = client.getNextMSG(3, TimeUnit.SECONDS);
+					byte[] temp = client.getNextMsg(3, TimeUnit.SECONDS);
 					if (null != temp) {
 						for (int i = 0; i < temp.length; i++) {
 							expectedlist.add(temp[i]);
@@ -177,7 +177,7 @@ class RunServer implements Runnable {
 				List<Byte> expectedlist = new ArrayList<>();
 				boolean keepPolling = true;
 				while (keepPolling && !stop) {
-					byte[] temp = server.getNextMSG(3, TimeUnit.SECONDS);
+					byte[] temp = server.getNextMsg(3, TimeUnit.SECONDS);
 					if (null != temp) {
 						for (int i = 0; i < temp.length; i++) {
 							expectedlist.add(temp[i]);

@@ -4,13 +4,13 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.Guardian;
-import com.arpitos.utils.UtilsFile;
-import com.arpitos.utils.UtilsZip;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.Guard;
+import com.artos.utils.UtilsFile;
+import com.artos.utils.UtilsZip;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
@@ -25,7 +25,7 @@ public class Test_zip implements TestExecutable {
 
 		// Check if it is Zip
 		boolean result = UtilsZip.isZipFile(zipFile);
-		Guardian.guardEquals("Zip or not Zip", true, result);
+		Guard.guardEquals(context, "Zip or not Zip", true, result);
 		System.out.println("File is a Zip File :" + zipFile);
 
 		// Unzip dir

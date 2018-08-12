@@ -1,11 +1,11 @@
 package unit_test.Convert;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.Convert;
-import com.arpitos.utils.Guardian;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.Guard;
+import com.artos.utils.Transform;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = true, sequence = 0, label = "all")
@@ -14,22 +14,22 @@ public class Test_bytes_to_ascii implements TestExecutable {
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		Convert _con = new Convert();
+		Transform _tfm = new Transform();
 
 		{
 			// public String bytesToStringHex(byte data, boolean bDisplaySize)
 			byte[] test1 = { (byte) 0x54, (byte) 0x45, (byte) 0x53, (byte) 0x54 };
 			String expectedResult1 = "TEST";
-			String resultArray1 = _con.bytesToAscii(test1);
-			Guardian.guardEquals("Bytes To ASCII", expectedResult1, resultArray1);
+			String resultArray1 = _tfm.bytesToAscii(test1);
+			Guard.guardEquals(context, "Bytes To ASCII", expectedResult1, resultArray1);
 		}
 
 		{
 			// public String bytesToAscii(byte data)
 			byte test2 = (byte) 0x54;
 			String expectedResult2 = "T";
-			String resultArray2 = _con.bytesToAscii(test2);
-			Guardian.guardEquals("Byte To ASCII", expectedResult2, resultArray2);
+			String resultArray2 = _tfm.bytesToAscii(test2);
+			Guard.guardEquals(context, "Byte To ASCII", expectedResult2, resultArray2);
 		}
 		// --------------------------------------------------------------------------------------------
 

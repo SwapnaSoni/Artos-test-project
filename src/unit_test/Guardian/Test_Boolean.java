@@ -1,10 +1,10 @@
 package unit_test.Guardian;
 
-import com.arpitos.annotation.TestCase;
-import com.arpitos.annotation.TestPlan;
-import com.arpitos.framework.infra.TestContext;
-import com.arpitos.interfaces.TestExecutable;
-import com.arpitos.utils.Guardian;
+import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
+import com.artos.framework.infra.TestContext;
+import com.artos.interfaces.TestExecutable;
+import com.artos.utils.Guard;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "13/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
@@ -14,46 +14,46 @@ public class Test_Boolean implements TestExecutable {
 
 		// --------------------------------------------------------------------------------------------
 		// guardTrue(), guardFalse() and isEquals()
-		Guardian.guardTrue("Test guardTrue() works", Guardian.isEquals(true, true));
-		Guardian.guardFalse("Test guardTrue() works", Guardian.isEquals(true, false));
+		Guard.guardTrue(context, "Test guardTrue() works", Guard.isEquals(true, true));
+		Guard.guardFalse(context, "Test guardTrue() works", Guard.isEquals(true, false));
 		// guardTrue() badPath
 		try {
-			Guardian.guardTrue("Test guardTrue() works", false);
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardTrue(context, "Test guardTrue() works", false);
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardTrue() works values are not equal");
+			Guard.guardEquals(context, e, "Test guardTrue() works values are not equal");
 		}
 		try {
-			Guardian.guardFalse("Test guardFalse() works", true);
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardFalse(context, "Test guardFalse() works", true);
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardFalse() works values are not equal");
+			Guard.guardEquals(context, e, "Test guardFalse() works values are not equal");
 		}
 
 		// guardEquals()
-		Guardian.guardEquals("Test guardEquals() works", true, true);
-		Guardian.guardEquals("Test guardEquals() works", false, false);
+		Guard.guardEquals(context, "Test guardEquals() works", true, true);
+		Guard.guardEquals(context, "Test guardEquals() works", false, false);
 		try {
-			Guardian.guardEquals("Test guardEquals() works", true, false);
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardEquals(context, "Test guardEquals() works", true, false);
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardEquals() works values are not equal");
+			Guard.guardEquals(context, e, "Test guardEquals() works values are not equal");
 		}
 
 		// guardNotEquals()
-		Guardian.guardNotEquals("Test guardNotEquals works", true, false);
-		Guardian.guardNotEquals("Test guardNotEquals works", false, true);
+		Guard.guardNotEquals(context, "Test guardNotEquals works", true, false);
+		Guard.guardNotEquals(context, "Test guardNotEquals works", false, true);
 		try {
-			Guardian.guardNotEquals("Test guardNotEquals() works", true, true);
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardNotEquals(context, "Test guardNotEquals() works", true, true);
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardNotEquals() works values are equal");
+			Guard.guardEquals(context, e, "Test guardNotEquals() works values are equal");
 		}
 		try {
-			Guardian.guardNotEquals("Test guardNotEquals() works", false, false);
-			Guardian.guardWrongFlow("Did not expect to reach here");
+			Guard.guardNotEquals(context, "Test guardNotEquals() works", false, false);
+			Guard.guardWrongFlow("Did not expect to reach here");
 		} catch (Exception e) {
-			Guardian.guardEquals(e, "Test guardNotEquals() works values are equal");
+			Guard.guardEquals(context, e, "Test guardNotEquals() works values are equal");
 		}
 		// --------------------------------------------------------------------------------------------
 
