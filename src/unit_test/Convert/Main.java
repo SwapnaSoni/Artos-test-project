@@ -2,8 +2,9 @@ package unit_test.Convert;
 
 import java.util.ArrayList;
 
-import com.artos.framework.ScanTestSuite;
+import com.artos.annotation.BeforeTestsuite;
 import com.artos.framework.infra.Runner;
+import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;
 
@@ -17,16 +18,16 @@ public class Main implements PrePostRunnable {
 		// tests.add(new Test_123());
 		// tests.add(new Test_abc());
 		// --------------------------------------------------------------------------------------------
-
-		// User can rely on reflection to populate test cases
-		if (tests.isEmpty()) {
-			tests = (ArrayList<TestExecutable>) new ScanTestSuite("unit_test.Convert").getTestList(true, true);
-		}
 		return tests;
 	}
 
 	public static void main(String[] args) throws Exception {
 		Runner runner = new Runner(Main.class);
 		runner.run(args, getTestList(), 1);
+	}
+
+	@BeforeTestsuite
+	public void beforeTestsuite(TestContext context) throws Exception {
+		throw new Exception("Purposeful exception");
 	}
 }

@@ -2,7 +2,6 @@ package unit_test.Logger;
 
 import java.util.ArrayList;
 
-import com.artos.framework.ScanTestSuite;
 import com.artos.framework.infra.Runner;
 import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;
@@ -18,10 +17,6 @@ public class Main implements PrePostRunnable {
 		// tests.add(new Test_abc());
 		// --------------------------------------------------------------------------------------------
 
-		// User can rely on reflection to populate test cases
-		if (tests.isEmpty()) {
-			tests = (ArrayList<TestExecutable>) new ScanTestSuite("unit_test.Logger").getTestList(true, true);
-		}
 		return tests;
 	}
 

@@ -16,14 +16,14 @@ public class Test_Current_Log_Files implements TestExecutable {
 
 		// --------------------------------------------------------------------------------------------
 		List<File> logFiles = context.getLogger().getCurrentGeneralLogFiles();
-		List<File> errorlogFiles = context.getLogger().getCurrentErrorLogFiles();
+		List<File> realTimelogFiles = context.getLogger().getCurrentRealTimeLogFiles();
 		List<File> summarylogFiles = context.getLogger().getCurrentSummaryLogFiles();
 
 		for (int i = 0; i < logFiles.size(); i++) {
 			context.getLogger().info(logFiles.get(i));
 		}
-		for (int i = 0; i < errorlogFiles.size(); i++) {
-			context.getLogger().info(errorlogFiles.get(i));
+		for (int i = 0; i < realTimelogFiles.size(); i++) {
+			context.getLogger().info(realTimelogFiles.get(i));
 		}
 		for (int i = 0; i < summarylogFiles.size(); i++) {
 			context.getLogger().info(summarylogFiles.get(i));

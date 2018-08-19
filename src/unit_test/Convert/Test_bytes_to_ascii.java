@@ -2,13 +2,14 @@ package unit_test.Convert;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
+import com.artos.framework.Enums.TestStatus;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 import com.artos.utils.Guard;
 import com.artos.utils.Transform;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
-@TestCase(skip = true, sequence = 0, label = "all")
+@TestCase(skip = false, sequence = 0, label = "all")
 public class Test_bytes_to_ascii implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
@@ -31,6 +32,8 @@ public class Test_bytes_to_ascii implements TestExecutable {
 			String resultArray2 = _tfm.bytesToAscii(test2);
 			Guard.guardEquals(context, "Byte To ASCII", expectedResult2, resultArray2);
 		}
+		
+		context.setTestStatus(TestStatus.FAIL);
 		// --------------------------------------------------------------------------------------------
 
 	}

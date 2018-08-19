@@ -34,6 +34,9 @@ public class Test_String implements TestExecutable {
 		} catch (Exception e) {
 			Guard.guardEquals(context, e, "Test guardTrue() works values are equal");
 		}
+
+		context.getLogger().debug((String) context.getGlobalObject("PARAM_1"));
+		context.getLogger().debug((String) context.getGlobalObject("PARAM_2"));
 		// --------------------------------------------------------------------------------------------
 
 	}
