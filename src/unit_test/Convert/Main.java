@@ -2,9 +2,7 @@ package unit_test.Convert;
 
 import java.util.ArrayList;
 
-import com.artos.annotation.BeforeTestsuite;
 import com.artos.framework.infra.Runner;
-import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;
 
@@ -24,10 +22,5 @@ public class Main implements PrePostRunnable {
 	public static void main(String[] args) throws Exception {
 		Runner runner = new Runner(Main.class);
 		runner.run(args, getTestList(), 1);
-	}
-
-	@BeforeTestsuite
-	public void beforeTestsuite(TestContext context) throws Exception {
-		throw new Exception("Purposeful exception");
 	}
 }
