@@ -18,13 +18,13 @@ public class Test_Enable_Disable_Logging implements TestExecutable {
 		}
 
 		// log should stop printing
-		context.disableGeneralLog();
+		context.getLogger().disableGeneralLog();
 		for (int i = 11; i < 20; i++) {
 			context.getLogger().info(i);
 		}
 
 		// log should be enabled again
-		context.enableGeneralLog();
+		context.getLogger().enableGeneralLog();
 		for (int i = 21; i < 30; i++) {
 			context.getLogger().info(i);
 		}
