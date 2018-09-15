@@ -35,8 +35,8 @@
     <property name="enableGUITestSelector">true</property>
     <property name="enableBanner">true</property>
     <property name="enableOrganisationInfo">true</property>
-    <property name="generateEclipseTemplate">false</property>
-    <property name="generateTestScript">false</property>
+    <property name="generateEclipseTemplate">true</property>
+    <property name="generateTestScript">true</property>
     <property name="stopOnFail">false</property>
   </features>
 </configuration>
