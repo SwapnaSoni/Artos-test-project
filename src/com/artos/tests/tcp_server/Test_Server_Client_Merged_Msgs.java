@@ -180,7 +180,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		}
 
 		for (int i = 0; i < validationList.size(); i++) {
-			returnedList.add(server.getNextMsg(2, TimeUnit.SECONDS));
+			returnedList.add(server.getNextMsg(2000, TimeUnit.MILLISECONDS));
 		}
 
 		client.disconnect();
