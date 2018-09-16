@@ -30,7 +30,7 @@ public class Main_loopcount_zero implements PrePostRunnable {
 	 */
 	public static void main(String[] args) throws Exception {
 		Runner runner = new Runner(Main_loopcount_zero.class);
-		runner.run(null, getTestList(), 0);
+		runner.run(args, getTestList(), 0);
 	}
 
 }
