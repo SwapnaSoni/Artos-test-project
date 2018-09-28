@@ -38,10 +38,6 @@ public class Test_bytes_to_ascii implements TestExecutable {
 			Guard.guardEquals(context, "Byte To ASCII", expectedResult2, resultArray2);
 			context.setTestStatus(TestStatus.PASS, "1 bytes to hex string conversion is successful");
 		}
-
-		context.getGlobalObject("PARAMETER-1");
-		context.setTestStatus(TestStatus.FAIL, "Did not expect to reach here");
-		throw new Exception("Before Test Suite");
 		// --------------------------------------------------------------------------------------------
 
 	}

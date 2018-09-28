@@ -1,7 +1,6 @@
-package com.artos.tests.unit_test;
+package com.artos.tests.email;
 
 import java.util.ArrayList;
-
 import com.artos.framework.infra.Runner;
 import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;
@@ -15,13 +14,6 @@ public class Main implements PrePostRunnable {
 		// TODO User May Add Test Case Manually as show in sample below
 		// tests.add(new Test_123());
 		// tests.add(new Test_abc());
-		tests.addAll(com.artos.tests.transform.Main.getTestList());
-		tests.addAll(com.artos.tests.custom_prompt.Main.getTestList());
-		tests.addAll(com.artos.tests.guard.Main.getTestList());
-		tests.addAll(com.artos.tests.properties_file_reader.Main.getTestList());
-		tests.addAll(com.artos.tests.tree.Main.getTestList());
-		tests.addAll(com.artos.tests.utils_string.Main.getTestList());
-		tests.addAll(com.artos.tests.ziptar.Main.getTestList());
 		// --------------------------------------------------------------------------------------------
 
 		return tests;

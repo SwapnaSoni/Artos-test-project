@@ -4,3 +4,4 @@ assets/
 .project
 .classpath
 reporting/
+conf/user_auth_settings.xml

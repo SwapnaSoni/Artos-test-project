@@ -19,7 +19,7 @@ public class Test_UDP_Connector implements TestExecutable {
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		// Launch UDP server with filter in seperate thread
+		// Launch UDP server with filter in separate thread
 		Thread t = new Thread(new UDPTest(context));
 		t.start();
 
@@ -27,6 +27,8 @@ public class Test_UDP_Connector implements TestExecutable {
 		UDP server2 = new UDP("127.0.0.1", 2345, "127.0.0.1", 1234);
 		server2.connect();
 		Transform _tfm = new Transform();
+		
+		
 		while (true) {
 			server2.sendMsg(_tfm.strHexToByteArray("31 32 33 34"));
 			Thread.sleep(100);
