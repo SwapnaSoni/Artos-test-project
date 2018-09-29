@@ -8,7 +8,7 @@ import com.artos.interfaces.TestExecutable;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "22/07/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 3, label = "all")
-public class Test_Logger implements TestExecutable {
+public class Test_Parameterised_Logger implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 

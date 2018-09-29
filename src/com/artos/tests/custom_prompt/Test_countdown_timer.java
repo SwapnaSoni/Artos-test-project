@@ -65,7 +65,7 @@ public class Test_countdown_timer implements TestExecutable {
 
 		CountDownLatch cntdwnltch4 = new CountDownLatch(1);
 		CustomPrompt cntdwn4 = new CustomPrompt(cntdwnltch4, 5000);
-		cntdwn4.showImage(new File("./assets/images/test.png"));
+		cntdwn4.setImage(new File("./assets/images/test.png"));
 		cntdwn4.setStr1("Countdown Timer : Blocking");
 		cntdwn4.setStr2("Button Text override : false");
 		cntdwn4.setStr3("Hide Buttons : True");
@@ -78,7 +78,7 @@ public class Test_countdown_timer implements TestExecutable {
 		System.out.println(Long.toString((timelast - time)));
 		CountDownLatch cntdwnltch5 = new CountDownLatch(1);
 		CustomPrompt cntdwn5 = new CustomPrompt(cntdwnltch5, 10000);
-		cntdwn5.showImage(new File("./assets/images/eye.jpg"));
+		cntdwn5.setImage(new File("./assets/images/eye.jpg"));
 		cntdwn5.setStr1("Countdown Timer : Blocking");
 		cntdwn5.setStr2("Stop GUI at anytime");
 		cntdwn5.setStr3("");
@@ -90,7 +90,7 @@ public class Test_countdown_timer implements TestExecutable {
 		logger.debug(Boolean.toString(cntdwn5.isButtonYesPressed()) + " : " + Boolean.toString(cntdwn5.isButtonNoPressed()));
 
 		CustomPrompt cntdwn6 = new CustomPrompt(null, 5000);
-		cntdwn6.showImage(new File("./assets/images/eye.jpg"));
+		cntdwn6.setImage(new File("./assets/images/eye.jpg"));
 		cntdwn6.setStr1("Countdown Timer : Non-Blocking");
 		cntdwn6.setStr2("Non-Blocking timer");
 		cntdwn6.setStr3("");
@@ -100,7 +100,7 @@ public class Test_countdown_timer implements TestExecutable {
 
 		CountDownLatch cntdwnltch7 = new CountDownLatch(1);
 		CustomPrompt cntdwn7 = new CustomPrompt(cntdwnltch7, 10000);
-		cntdwn7.showImage(new File("./assets/images/eye.jpg"));
+		cntdwn7.setImage(new File("./assets/images/eye.jpg"));
 		cntdwn7.setStr1("Countdown Timer : Non-Blocking");
 		cntdwn7.setStr2("Non-Blocking timer");
 		cntdwn7.setStr3("");

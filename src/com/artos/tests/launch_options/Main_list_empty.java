@@ -28,7 +28,7 @@ public class Main_list_empty implements PrePostRunnable {
 
 	/**
 	 * <PRE>
-	 * GIVEN User adds all available test cases (10 out of 10 in this case) to the list
+	 * GIVEN User adds all available test cases (6 out of 10 in this case) to the list
 	 * AND User leaves test list empty
 	 * THEN All test cases present within same package (inclusive of child packages) (10 out of 10 in this case) should execute.
 	 * </PRE>
