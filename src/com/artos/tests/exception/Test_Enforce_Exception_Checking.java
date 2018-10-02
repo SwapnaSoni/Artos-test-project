@@ -10,22 +10,23 @@ import com.artos.interfaces.TestExecutable;
 /**
  * <PRE>
  * GIVEN {@code ExpectedException} is set
+ * AND exception checking is enforced (enforce = true)
  * AND test case does not throw an exception
- * THEN test should pass.
+ * THEN test should fail.
  * </PRE>
  * 
  * @author arpit
  *
  */
-@ExpectedException(expectedException = Exception.class, contains = "299")
-@TestPlan(decription = "Test_Pass_When_Exception_Is_Specified", preparedBy = "arpit", preparationDate = "28/09/2018", reviewedBy = "", reviewDate = "")
+@ExpectedException(expectedExceptions = Exception.class, contains = "299", enforce = true)
+@TestPlan(preparedBy = "arpit", preparationDate = "28/09/2018", bdd = "GIVEN {@code ExpectedException} is set AND exception checking is enforced (enforce = true) AND test case does not throw an exception THEN test should fail.")
 @TestCase(skip = false, sequence = 0, label = "all")
-public class Test_Pass_When_Exception_Is_Specified implements TestExecutable {
+public class Test_Enforce_Exception_Checking implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		context.setTestStatus(TestStatus.PASS, "No Exception in test case when Exception annotation is specified");
+		context.setTestStatus(TestStatus.PASS, "Did not throw acception even through exception annotation was specified");
 		// --------------------------------------------------------------------------------------------
 
 	}

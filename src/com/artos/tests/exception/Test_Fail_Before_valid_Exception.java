@@ -18,7 +18,7 @@ import com.artos.interfaces.TestExecutable;
  * @author arpit
  *
  */
-@ExpectedException(expectedException = Exception.class, contains = "299")
+@ExpectedException(expectedExceptions = Exception.class, contains = "299")
 @TestPlan(decription = "Test_Fail_Before_valid_Exception", preparedBy = "arpit", preparationDate = "28/09/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_Fail_Before_valid_Exception implements TestExecutable {

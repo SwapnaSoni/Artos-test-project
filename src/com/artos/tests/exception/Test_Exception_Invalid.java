@@ -18,7 +18,7 @@ import com.artos.interfaces.TestExecutable;
  * @author arpit
  *
  */
-@ExpectedException(expectedException = BufferUnderflowException.class, contains = "[^0-9]*[12]?[0-9]{1,2}[^0-9]*")
+@ExpectedException(expectedExceptions = BufferUnderflowException.class, contains = "[^0-9]*[12]?[0-9]{1,2}[^0-9]*")
 @TestPlan(decription = "Test_Exception_Invalid", preparedBy = "arpit", preparationDate = "28/09/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_Exception_Invalid implements TestExecutable {

@@ -1,30 +1,22 @@
 package com.artos.tests.exception;
 
+import java.nio.BufferUnderflowException;
+
 import com.artos.annotation.ExpectedException;
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-/**
- * <PRE>
- * GIVEN Exception is thrown 
- * AND {@code ExpectedException} is set to same as expected exception.
- * THEN test should pass.
- * </PRE>
- * 
- * @author arpit
- *
- */
-@ExpectedException(expectedExceptions = Exception.class)
-@TestPlan(decription = "Test_Expected_Exception", preparedBy = "arpit", preparationDate = "28/09/2018", reviewedBy = "", reviewDate = "")
+@ExpectedException(expectedExceptions = { BufferUnderflowException.class, NumberFormatException.class, NullPointerException.class }, contains = "abc")
+@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "1/10/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
-public class Test_Expected_Exception implements TestExecutable {
+public class Test_More_Than_one_Exception2 implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		throw new Exception("Hello How are you");
+		throw new Exception("abc");
 		// --------------------------------------------------------------------------------------------
 
 	}

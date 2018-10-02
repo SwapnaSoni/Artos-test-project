@@ -17,7 +17,7 @@ import com.artos.interfaces.TestExecutable;
  * @author arpit
  *
  */
-@ExpectedException(expectedException = Exception.class, contains = "299")
+@ExpectedException(expectedExceptions = Exception.class, contains = "299")
 @TestPlan(decription = "Test_Expected_ExceptionAndMsg2", preparedBy = "arpit", preparationDate = "28/09/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0, label = "all")
 public class Test_Expected_ExceptionAndMsg2 implements TestExecutable {
