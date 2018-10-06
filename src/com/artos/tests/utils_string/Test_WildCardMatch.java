@@ -8,7 +8,7 @@ import com.artos.utils.Guard;
 import com.artos.utils.UtilsString;
 
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "12/05/2018", reviewedBy = "", reviewDate = "")
-@TestCase(skip = false, sequence = 0, label = "all")
+@TestCase(skip = false, sequence = 0)
 public class Test_WildCardMatch implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {

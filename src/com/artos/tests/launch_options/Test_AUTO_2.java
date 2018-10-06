@@ -6,7 +6,7 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @Group(group = { "AUTO" })
-@TestCase(skip = false, sequence = 0, label = "all")
+@TestCase(skip = false, sequence = 0)
 public class Test_AUTO_2 implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {

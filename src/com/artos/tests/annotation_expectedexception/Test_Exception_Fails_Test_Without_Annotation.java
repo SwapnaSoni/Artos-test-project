@@ -1,18 +1,18 @@
-package com.artos.tests.launch_options;
+package com.artos.tests.annotation_expectedexception;
 
-import com.artos.annotation.Group;
 import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@Group(group = { "CI" })
+@TestPlan(preparedBy = "arpit", preparationDate = "28/09/2018", bdd = "GIVEN Exception is thrown AND {@code ExpectedException} is not specified THEN test should fail.")
 @TestCase(skip = false, sequence = 0)
-public class Test_CI_2 implements TestExecutable {
+public class Test_Exception_Fails_Test_Without_Annotation implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		context.getLogger().info("This is CI test");
+		throw new Exception("Test Exception");
 		// --------------------------------------------------------------------------------------------
 
 	}

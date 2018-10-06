@@ -1,18 +1,21 @@
-package com.artos.tests.launch_options;
+package com.artos.tests.utils_tree;
 
-import com.artos.annotation.Group;
+import java.io.File;
+
 import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
+import com.artos.utils.Tree;
 
-@Group(group = { "CI" })
+@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "12/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
-public class Test_CI_2 implements TestExecutable {
+public class Test_Tree implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		context.getLogger().info("This is CI test");
+		context.getLogger().info(Tree.printDirectoryTree(new File(".")));
 		// --------------------------------------------------------------------------------------------
 
 	}
