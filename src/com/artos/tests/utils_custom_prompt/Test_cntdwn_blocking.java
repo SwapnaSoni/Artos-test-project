@@ -29,6 +29,7 @@ public class Test_cntdwn_blocking implements TestExecutable {
 			cntdwn1.setStr4(" ");
 			cntdwn1.start();
 			cntdwnltch1.await();
+			cntdwn1.stop();
 
 			long time2 = System.currentTimeMillis();
 

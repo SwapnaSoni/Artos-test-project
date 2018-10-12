@@ -9,7 +9,7 @@ import com.artos.interfaces.TestExecutable;
 
 @ExpectedException(expectedExceptions = { NullPointerException.class })
 @TestPlan(preparedBy = "arpit", preparationDate = "6/10/2018", bdd = "GIVEN {@code ExpectedException} annotation is specified AND Test is marked as ktf by user THEN test outcome should be skip AND it should not fail with exception checking")
-@TestCase(skip = false, sequence = 0)
+@TestCase(skip = false, sequence = 2)
 public class Test_Exception_Check_Ignored_If_KTF implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {

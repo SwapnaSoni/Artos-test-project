@@ -17,7 +17,7 @@ import com.artos.interfaces.TestExecutable;
  * @author arpit
  *
  */
-@TestCase(skip = false, sequence = 0)
+@TestCase(skip = false, sequence = 2)
 public class Test_Generate_TestPlan_Package_Specific implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {

@@ -6,7 +6,7 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @Group(group = { "SEMI" })
-@TestCase(skip = false, sequence = 0)
+@TestCase(skip = false, sequence = 10)
 public class Test_SEMI_2 implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {

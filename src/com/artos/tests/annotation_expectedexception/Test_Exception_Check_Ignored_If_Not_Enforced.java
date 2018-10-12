@@ -9,7 +9,7 @@ import com.artos.interfaces.TestExecutable;
 
 @ExpectedException(expectedExceptions = Exception.class, contains = "299", enforce = false)
 @TestPlan(preparedBy = "arpit", preparationDate = "28/09/2018", bdd = "GIVEN {@code ExpectedException} is set AND exception checking is not enforced (enforce = false) AND test case does not throw an exception THEN test should pass")
-@TestCase(skip = false, sequence = 0)
+@TestCase(skip = false, sequence = 3)
 public class Test_Exception_Check_Ignored_If_Not_Enforced implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {

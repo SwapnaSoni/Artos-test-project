@@ -9,7 +9,7 @@ import com.artos.interfaces.TestExecutable;
 
 @KnownToFail(ktf = false, bugref = "JIRA-????")
 @TestPlan(preparedBy = "arpit", preparationDate = "6/10/2018", bdd = "GIVEN KTF is atleast set once during test execution AND rest of the time test is set with SKIP status THEN test outcome will be KTF")
-@TestCase(skip = false, sequence = 0)
+@TestCase(skip = false, sequence = 4)
 public class Test_KTF_Higher_Priority_Than_Skip implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {

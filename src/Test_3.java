@@ -1,18 +1,16 @@
-package com.artos.tests.launch_options;
-
-import com.artos.annotation.Group;
 import com.artos.annotation.TestCase;
+import com.artos.annotation.TestPlan;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@Group(group = { "SEMI" })
-@TestCase(skip = false, sequence = 9)
-public class Test_SEMI_1 implements TestExecutable {
+@TestPlan(preparedBy = "arpit", preparationDate = "7/10/2018", bdd = "")
+@TestCase(skip = false, sequence = 0)
+public class Test_3 implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		context.getLogger().info("This is SEMI test");
+		// TODO Write Test Here
 		// --------------------------------------------------------------------------------------------
 
 	}

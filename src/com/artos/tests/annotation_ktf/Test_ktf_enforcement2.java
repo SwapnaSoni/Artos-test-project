@@ -9,7 +9,7 @@ import com.artos.interfaces.TestExecutable;
 
 @KnownToFail(ktf = true, bugref = "JIRA-????")
 @TestPlan(preparedBy = "arpit", preparationDate = "6/10/2018", bdd = "GIVEN ktf check is enforced using @KnownToFail annotation AND test status is KTF THEN test outcome will be KTF")
-@TestCase(skip = false, sequence = 0)
+@TestCase(skip = false, sequence = 2)
 public class Test_ktf_enforcement2 implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {

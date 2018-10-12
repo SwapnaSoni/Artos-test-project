@@ -10,7 +10,7 @@ import com.artos.interfaces.TestExecutable;
 
 @ExpectedException(expectedExceptions = { BufferUnderflowException.class, NumberFormatException.class, NullPointerException.class }, contains = "abc")
 @TestPlan(decription = "", preparedBy = "arpit", preparationDate = "1/10/2018", bdd = "GIVEN more than one exceptions are specified AND description matching is provided AND test case throws exception which does not match any of the exception but matches description THEN test case fails")
-@TestCase(skip = false, sequence = 0)
+@TestCase(skip = false, sequence = 12)
 public class Test_More_Than_one_Exception2 implements TestExecutable {
 
 	public void execute(TestContext context) throws Exception {
