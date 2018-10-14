@@ -1,6 +1,7 @@
 package com.artos.tests.launch_options;
 
 import java.util.ArrayList;
+
 import com.artos.framework.infra.Runner;
 import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;

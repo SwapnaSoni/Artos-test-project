@@ -12,7 +12,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 6)
 public class Test_No_KTF_enforcement_works implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.setTestStatus(TestStatus.PASS, "This test will be KTF");

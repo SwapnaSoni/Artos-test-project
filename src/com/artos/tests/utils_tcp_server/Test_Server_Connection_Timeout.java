@@ -22,7 +22,7 @@ import com.artos.utils.TCPServer;
 @TestCase(skip = false, sequence = 0)
 public class Test_Server_Connection_Timeout implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Check if user initialise server with fix socket timeout and no client

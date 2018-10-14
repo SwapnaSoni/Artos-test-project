@@ -24,7 +24,7 @@ import com.artos.utils.CustomPrompt;
 @TestCase(skip = false, sequence = 0)
 public class Test_Server_Client_Msg_Filtering implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		CountDownLatch cntdwn = new CountDownLatch(1);

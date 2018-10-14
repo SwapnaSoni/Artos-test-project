@@ -11,7 +11,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 9)
 public class Test_Expected_ExceptionAndMsg2 implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Regular expression to match 100% text

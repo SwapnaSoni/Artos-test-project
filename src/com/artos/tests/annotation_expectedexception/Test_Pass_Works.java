@@ -10,7 +10,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 13)
 public class Test_Pass_Works implements TestExecutable{
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.setTestStatus(TestStatus.PASS, "No Exception Annotation");

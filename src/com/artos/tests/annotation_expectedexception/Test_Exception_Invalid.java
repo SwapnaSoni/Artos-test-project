@@ -13,7 +13,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 6)
 public class Test_Exception_Invalid implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		throw new Exception("299");

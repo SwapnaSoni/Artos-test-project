@@ -14,7 +14,7 @@ import com.artos.utils.CustomPrompt;
 @TestCase(skip = false, sequence = 0, label = "all:semiautomated")
 public class Test_countdown_timer implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		LogWrapper logger = context.getLogger();

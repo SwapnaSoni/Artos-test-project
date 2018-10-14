@@ -14,7 +14,7 @@ import com.artos.utils.Guard;
 @TestCase(skip = false, sequence = 0)
 public class Test_ReInitialising_Object implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Re-Initialise count down timer object which is already launched in

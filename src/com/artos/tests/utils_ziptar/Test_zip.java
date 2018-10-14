@@ -16,7 +16,7 @@ import com.artos.utils.UtilsZip;
 @TestCase(skip = false, sequence = 0)
 public class Test_zip implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Clean dir before start of the test

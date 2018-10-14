@@ -15,7 +15,7 @@ import com.artos.utils.UtilsTar;
 @TestCase(skip = false, sequence = 0)
 public class Test_tar implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Clean dir before start of the test

@@ -14,7 +14,7 @@ import com.artos.utils.Guard;
 @TestCase(skip = false, sequence = 0)
 public class Test_cntdwn_blocking implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		for (int i = 0; i < 5; i++) {

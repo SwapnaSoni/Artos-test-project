@@ -13,7 +13,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 12)
 public class Test_More_Than_one_Exception2 implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		throw new Exception("abc");

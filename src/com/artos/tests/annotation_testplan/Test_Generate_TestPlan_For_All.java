@@ -20,7 +20,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 1)
 public class Test_Generate_TestPlan_For_All implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		ScanTestSuite testPlan = new ScanTestSuite("");		

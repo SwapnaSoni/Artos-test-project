@@ -14,7 +14,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 1)
 public class Test_Current_Log_Files implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		List<File> logFiles = context.getLogger().getCurrentGeneralLogFiles();

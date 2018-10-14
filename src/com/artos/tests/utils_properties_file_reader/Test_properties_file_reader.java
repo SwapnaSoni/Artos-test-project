@@ -14,7 +14,7 @@ import com.artos.utils.PropertiesFileReader;
 @TestCase(skip = false, sequence = 0)
 public class Test_properties_file_reader implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		LogWrapper logger = context.getLogger();

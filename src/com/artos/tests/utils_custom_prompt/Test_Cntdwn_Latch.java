@@ -20,7 +20,7 @@ import com.artos.utils.Guard;
 @TestCase(skip = false, sequence = 0)
 public class Test_Cntdwn_Latch implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception, InterruptedException {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception, InterruptedException {
 
 		// --------------------------------------------------------------------------------------------
 		//Blocking Countdown Latch

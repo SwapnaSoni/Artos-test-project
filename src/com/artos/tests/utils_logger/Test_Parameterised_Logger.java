@@ -10,7 +10,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 3)
 public class Test_Parameterised_Logger implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		LogWrapper logger = context.getLogger();

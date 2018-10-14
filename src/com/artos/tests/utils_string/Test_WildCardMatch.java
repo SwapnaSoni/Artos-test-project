@@ -11,7 +11,7 @@ import com.artos.utils.UtilsString;
 @TestCase(skip = false, sequence = 0)
 public class Test_WildCardMatch implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		String str = "THISisArpitos_Test12345@#$%";

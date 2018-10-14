@@ -1,6 +1,7 @@
 package com.artos.tests.annotation_expectedexception;
 
 import java.util.ArrayList;
+
 import com.artos.framework.infra.Runner;
 import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;

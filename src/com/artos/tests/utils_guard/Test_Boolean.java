@@ -10,7 +10,7 @@ import com.artos.utils.Guard;
 @TestCase(skip = false, sequence = 0)
 public class Test_Boolean implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// guardTrue(), guardFalse() and isEquals()

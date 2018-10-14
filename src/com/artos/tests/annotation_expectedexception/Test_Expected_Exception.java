@@ -11,7 +11,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 7)
 public class Test_Expected_Exception implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		throw new Exception("Hello How are you");

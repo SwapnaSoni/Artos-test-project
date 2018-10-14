@@ -1,19 +1,20 @@
-package com.artos.tests.annotation_expectedexception;
+package com.artos.tests.annotation_dataprovider;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@TestPlan(preparedBy = "arpit", preparationDate = "28/09/2018", bdd = "GIVEN Exception is thrown AND {@code ExpectedException} is not specified THEN test should fail.")
-@TestCase(skip = false, sequence = 5)
-public class Test_Exception_Fails_Test_Without_Annotation implements TestExecutable {
+@TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "")
+@TestCase(skip = false, sequence = 2, dataprovider = "NonStaticUserNamesStringInteger")
+public class Test_NonStatic_DataProvider implements TestExecutable {
 
 	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		throw new Exception("Test Exception");
+		System.out.println(data1 + ":" + data2);
 		// --------------------------------------------------------------------------------------------
 
 	}
+
 }

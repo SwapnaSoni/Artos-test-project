@@ -20,7 +20,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 0)
 public class Test_Server_Client_Communication implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		RunServer s1 = new RunServer(context, 1200, null, null);

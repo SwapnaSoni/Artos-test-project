@@ -11,7 +11,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 8)
 public class Test_Expected_ExceptionAndMsg implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Regular expression to check value below 300

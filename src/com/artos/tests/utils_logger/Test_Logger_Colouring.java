@@ -9,7 +9,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 3)
 public class Test_Logger_Colouring implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.getLogger().info("Hiiii This is info");

@@ -13,7 +13,7 @@ import com.artos.utils.CustomPrompt;
 @TestCase(skip = false, sequence = 0)
 public class Test_Btn_Text implements TestExecutable {
 
-	public void execute(TestContext context) throws Exception {
+	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		String[] text = new String[] { "????", "****", "####", "Yes", "No", "True", "False", "12345678901234567890", "!@#$%^&*()" };
