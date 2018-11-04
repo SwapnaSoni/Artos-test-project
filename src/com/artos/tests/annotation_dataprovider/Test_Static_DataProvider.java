@@ -5,11 +5,12 @@ import com.artos.annotation.TestPlan;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "")
-@TestCase(skip = false, sequence = 1, dataprovider = "StaticUserNamesStringString")
+@TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "GIVEN dataprovider method is \"public static\" THEN dataprovider should work as expected")
+@TestCase(skip = false, sequence = 2, dataprovider = "StaticUserNamesStringString")
 public class Test_Static_DataProvider implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override
+	public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		System.out.println(data1 + ":" + data2);

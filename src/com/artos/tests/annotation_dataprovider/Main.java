@@ -11,18 +11,6 @@ public class Main implements PrePostRunnable {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
 
 		// --------------------------------------------------------------------------------------------
-		// Good path
-		tests.add(new Test_NonDataProvider());
-		tests.add(new Test_Static_DataProvider());
-		tests.add(new Test_NonStatic_DataProvider());
-		tests.add(new Test_DataProvider_Ignore_Case());
-
-		// Bad path
-		tests.add(new Test_Invalid_DataProvider_Name());
-		tests.add(new Test_DataProvider_Wrong_Casting());
-		tests.add(new Test_Single_Dimention_DataProvider());
-		tests.add(new Test_EmptyDataProvider());
-		tests.add(new Test_Null_DataProvider());
 		// --------------------------------------------------------------------------------------------
 
 		return tests;

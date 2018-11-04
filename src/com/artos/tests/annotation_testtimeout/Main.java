@@ -1,9 +1,6 @@
-
-
-package com.artos.tests.utils_custom_prompt;
+package com.artos.tests.annotation_testtimeout;
 
 import java.util.ArrayList;
-
 import com.artos.framework.infra.Runner;
 import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;
@@ -18,6 +15,7 @@ public class Main implements PrePostRunnable {
 		// tests.add(new Test_123());
 		// tests.add(new Test_abc());
 		// --------------------------------------------------------------------------------------------
+
 		return tests;
 	}
 

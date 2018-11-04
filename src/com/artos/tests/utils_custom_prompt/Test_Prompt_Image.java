@@ -20,6 +20,7 @@ public class Test_Prompt_Image implements TestExecutable {
 	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
+		
 		LogWrapper logger = context.getLogger();
 		CustomPrompt cntdwn = new CustomPrompt(null, 15000);
 		cntdwn.setImage(new File("./assets/images/eye2.JPEG"));
@@ -29,6 +30,7 @@ public class Test_Prompt_Image implements TestExecutable {
 		Thread.sleep(10000);
 		logger.debug("Yes Button Pressed : " + Boolean.toString(cntdwn.isButtonYesPressed()) + "And"
 				+ "No Button Pressed : " + Boolean.toString(cntdwn.isButtonNoPressed()));
+		
 		// --------------------------------------------------------------------------------------------
 	}
 }

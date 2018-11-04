@@ -5,8 +5,8 @@ import com.artos.annotation.TestPlan;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "")
-@TestCase(skip = false, sequence = 0, dataprovider = "non_static_string_string")
+@TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "GIVEN dataprovider method is within scanning scope and dataprovider attributes are set correctly THEN dataprovider name should work regardless of the case sensitiveness")
+@TestCase(skip = false, sequence = 4, dataprovider = "non_static_string_string")
 public class Test_DataProvider_Ignore_Case implements TestExecutable {
 
 	@Override
