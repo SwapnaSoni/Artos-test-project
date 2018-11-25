@@ -23,18 +23,19 @@
     <property name="SSLPort">587</property>
     <property name="SMTPAuth">true</property>
     <property name="SendersName">John Murray</property>
-    <property name="SendersEmail">artos.framework@gmail.com</property>
+    <property name="SendersEmail">test@gmail.com</property>
     <property name="emailAuthSettingsFilePath">.\conf\user_auth_settings.xml</property>
-    <property name="ReceiversEmail">arpit.shah1@gmail.com</property>
+    <property name="ReceiversEmail">test@gmail.com</property>
     <property name="ReceiversName">Mac Murray</property>
     <property name="EmailSubject">Artos Email Client</property>
     <property name="EmailMessage">This is a test Email from Artos</property>
   </smtp_settings>
   <features>
     <property name="enableGUITestSelector">true</property>
+    <property name="enableGUITestSelectorSeqNumber">true</property>
     <property name="enableBanner">true</property>
     <property name="enableOrganisationInfo">true</property>
-    <property name="enableEmailClient">true</property>
+    <property name="enableEmailClient">false</property>
     <property name="generateEclipseTemplate">false</property>
     <property name="generateTestScript">true</property>
     <property name="stopOnFail">false</property>

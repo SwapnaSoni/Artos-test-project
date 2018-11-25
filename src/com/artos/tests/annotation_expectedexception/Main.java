@@ -12,7 +12,7 @@ public class Main implements PrePostRunnable {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
 
 		// --------------------------------------------------------------------------------------------
-		
+
 		// Good path
 		tests.add(new Test_Expected_Exception());
 		tests.add(new Test_Expected_ExceptionAndMsg());
@@ -25,12 +25,13 @@ public class Main implements PrePostRunnable {
 		tests.add(new Test_More_Than_one_Exception());
 		tests.add(new Test_Exception_Check_Ignored_If_Skip());
 		tests.add(new Test_Exception_Check_Ignored_If_KTF());
-		
+		tests.add(new Test_Exception_Msg_Using_Regex_EscapeChar());
+
 		// Bad path
 		tests.add(new Test_Exception_Invalid());
 		tests.add(new Test_RegEx_Value_Invalid());
 		tests.add(new Test_More_Than_one_Exception2());
-		
+
 		// --------------------------------------------------------------------------------------------
 
 		return tests;
