@@ -10,12 +10,12 @@ import com.artos.interfaces.TestExecutable;
 public class Test_Null_DataProvider implements TestExecutable {
 
 	@Override
-	public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		System.out.println("This is empty data provider test");
-		System.out.println("data1 : " + data1);
-		System.out.println("data2 : " + data2);
+		System.out.println("data1 : " + context.getParameterisedObject1());
+		System.out.println("data2 : " + context.getParameterisedObject2());
 		// --------------------------------------------------------------------------------------------
 
 	}

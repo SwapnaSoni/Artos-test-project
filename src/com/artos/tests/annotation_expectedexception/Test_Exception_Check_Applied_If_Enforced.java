@@ -12,7 +12,8 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 1)
 public class Test_Exception_Check_Applied_If_Enforced implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.setTestStatus(TestStatus.PASS, "Did not throw exception even through exception annotation was specified");

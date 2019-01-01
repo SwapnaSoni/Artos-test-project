@@ -16,11 +16,11 @@ import com.artos.interfaces.TestExecutable;
  * @author arpit
  *
  */
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
 public class Test_Server_Client_Communication implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		RunServer s1 = new RunServer(context, 1200, null, null);

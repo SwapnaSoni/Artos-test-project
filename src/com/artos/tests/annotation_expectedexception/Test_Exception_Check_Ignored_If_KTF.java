@@ -12,7 +12,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 2)
 public class Test_Exception_Check_Ignored_If_KTF implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.setTestStatus(TestStatus.KTF, "User choose to mark test case as known to fail");

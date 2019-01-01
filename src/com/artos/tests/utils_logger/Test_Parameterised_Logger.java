@@ -6,11 +6,11 @@ import com.artos.framework.infra.LogWrapper;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "22/07/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "", preparedBy = "arpit", preparationDate = "22/07/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 3)
 public class Test_Parameterised_Logger implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		LogWrapper logger = context.getLogger();

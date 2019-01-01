@@ -9,7 +9,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 10)
 public class Test_SEMI_2 implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.getLogger().info("This is SEMI test");

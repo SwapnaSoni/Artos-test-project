@@ -10,11 +10,11 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @KnownToFail(ktf = false, bugref = "")
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "15/05/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "", preparedBy = "arpit", preparationDate = "15/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 1)
 public class Test_Current_Log_Files implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		List<File> logFiles = context.getLogger().getCurrentGeneralLogFiles();

@@ -12,12 +12,12 @@ import com.artos.utils.Transform;
 public class Test_IntegerAndByteArray implements TestExecutable {
 
 	@Override
-	public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		Transform tfm = new Transform();
-		String data1toString = Integer.toString((Integer) data1);
-		String data2toString = tfm.bytesToHexString((byte[]) data2);
+		String data1toString = Integer.toString((Integer) context.getParameterisedObject1());
+		String data2toString = tfm.bytesToHexString((byte[]) context.getParameterisedObject2());
 		System.out.println(data1toString + ":" + data2toString);
 		if (data2toString.startsWith("0"
 				+ ""

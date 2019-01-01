@@ -11,19 +11,19 @@ import com.artos.interfaces.TestExecutable;
 public class Test_ExtentReport_Child_Status implements TestExecutable {
 
 	@Override
-	public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		if (((String) data2).equals("Test@123")) {
+		if (((String) context.getParameterisedObject2()).equals("Test@123")) {
 			context.setTestStatus(TestStatus.PASS, "123");
 		}
-		if (((String) data2).equals("Test@456")) {
+		if (((String) context.getParameterisedObject2()).equals("Test@456")) {
 			context.setTestStatus(TestStatus.FAIL, "456");
 		}
-		if (((String) data2).equals("Test@789")) {
+		if (((String) context.getParameterisedObject2()).equals("Test@789")) {
 			context.setTestStatus(TestStatus.SKIP, "789");
 		}
-		if (((String) data2).equals("Test@000")) {
+		if (((String) context.getParameterisedObject2()).equals("Test@000")) {
 			context.setTestStatus(TestStatus.KTF, "000");
 		}
 		// --------------------------------------------------------------------------------------------

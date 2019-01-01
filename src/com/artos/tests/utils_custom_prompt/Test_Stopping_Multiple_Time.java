@@ -9,11 +9,11 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 import com.artos.utils.CustomPrompt;
 
-@TestPlan(decription = "Test_Stopping_Multiple_Time", preparedBy = "arpit", preparationDate = "27/09/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "Test_Stopping_Multiple_Time", preparedBy = "arpit", preparationDate = "27/09/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
 public class Test_Stopping_Multiple_Time implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Stopping count down timer object which is already stopped in blocking

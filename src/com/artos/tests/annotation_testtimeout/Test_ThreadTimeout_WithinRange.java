@@ -10,7 +10,7 @@ import com.artos.interfaces.TestExecutable;
 public class Test_ThreadTimeout_WithinRange implements TestExecutable {
 
 	@Override
-	public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		Thread.sleep(5000);

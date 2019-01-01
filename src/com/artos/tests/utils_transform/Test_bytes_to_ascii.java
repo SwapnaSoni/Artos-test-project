@@ -12,11 +12,11 @@ import com.artos.utils.Transform;
 
 @Group(group = { "CI_AT" })
 @KnownToFail(ktf = false, bugref = "JIRA-134, JIRA-456, JIRA-789")
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
 public class Test_bytes_to_ascii implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		Transform _tfm = new Transform();

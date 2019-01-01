@@ -12,7 +12,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 5)
 public class Test_KTF_Lower_Priority_Than_Fail implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.setTestStatus(TestStatus.FAIL, "This test will be KTF");

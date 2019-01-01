@@ -12,11 +12,11 @@ import com.artos.interfaces.TestExecutable;
 import com.artos.utils.Transform;
 import com.artos.utils.UDP;
 
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "7/07/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "", preparedBy = "arpit", preparationDate = "7/07/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
 public class Test_UDP_Connector implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Launch UDP server with filter in separate thread

@@ -12,7 +12,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 4)
 public class Test_Exception_Check_Ignored_If_Skip implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.setTestStatus(TestStatus.SKIP, "User choose to skip the test case");

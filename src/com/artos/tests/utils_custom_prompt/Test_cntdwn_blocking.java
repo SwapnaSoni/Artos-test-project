@@ -10,11 +10,11 @@ import com.artos.interfaces.TestExecutable;
 import com.artos.utils.CustomPrompt;
 import com.artos.utils.Guard;
 
-@TestPlan(decription = "\nGIVEN timer is launched with countdownlatch is set to 1\nAND time timeout is set to 5 seconds\nTHEN timer should block until timeout is achieved with an allowance of 200 msec", preparedBy = "arpit", preparationDate = "27/09/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "\nGIVEN timer is launched with countdownlatch is set to 1\nAND time timeout is set to 5 seconds\nTHEN timer should block until timeout is achieved with an allowance of 200 msec", preparedBy = "arpit", preparationDate = "27/09/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
 public class Test_cntdwn_blocking implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		for (int i = 0; i < 5; i++) {

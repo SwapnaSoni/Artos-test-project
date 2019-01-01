@@ -5,11 +5,11 @@ import com.artos.annotation.TestPlan;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@TestPlan(decription = "Test_Logger_Colouring", preparedBy = "arpit", preparationDate = "23/08/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "Test_Logger_Colouring", preparedBy = "arpit", preparationDate = "23/08/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 3)
 public class Test_Logger_Colouring implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.getLogger().info("Hiiii This is info");

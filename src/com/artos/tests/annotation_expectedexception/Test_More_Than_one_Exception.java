@@ -9,11 +9,11 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @ExpectedException(expectedExceptions = { BufferUnderflowException.class, NumberFormatException.class, NullPointerException.class }, contains = "abc")
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "1/10/2018", bdd = "GIVEN more than one exceptions are specified AND description matching is provided AND test case throws exception which matches one of the exception and description THEN test case passes")
+@TestPlan(description = "", preparedBy = "arpit", preparationDate = "1/10/2018", bdd = "GIVEN more than one exceptions are specified AND description matching is provided AND test case throws exception which matches one of the exception and description THEN test case passes")
 @TestCase(skip = false, sequence = 11)
 public class Test_More_Than_one_Exception implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		throw new NullPointerException("abc");

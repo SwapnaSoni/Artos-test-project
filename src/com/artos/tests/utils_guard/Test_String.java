@@ -6,11 +6,11 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 import com.artos.utils.Guard;
 
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "13/05/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "", preparedBy = "arpit", preparationDate = "13/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
 public class Test_String implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		Guard.guardEquals(context, "Test String isEqual() works", true, Guard.isEquals("ABCD", "ABCD"));

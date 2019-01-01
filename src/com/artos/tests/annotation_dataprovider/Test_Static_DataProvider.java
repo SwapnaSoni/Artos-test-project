@@ -10,10 +10,10 @@ import com.artos.interfaces.TestExecutable;
 public class Test_Static_DataProvider implements TestExecutable {
 
 	@Override
-	public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		System.out.println(data1 + ":" + data2);
+		System.out.println(context.getParameterisedObject1() + ":" + context.getParameterisedObject2());
 		// --------------------------------------------------------------------------------------------
 
 	}

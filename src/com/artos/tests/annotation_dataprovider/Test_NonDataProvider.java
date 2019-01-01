@@ -10,7 +10,7 @@ import com.artos.interfaces.TestExecutable;
 public class Test_NonDataProvider implements TestExecutable {
 
 	@Override
-	public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		System.out.println("This is non data provider test");

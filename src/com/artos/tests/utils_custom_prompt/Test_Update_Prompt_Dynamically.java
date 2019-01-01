@@ -8,7 +8,7 @@ import com.artos.utils.CustomPrompt;
 @TestCase(skip = false, sequence = 0)
 public class Test_Update_Prompt_Dynamically implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Countdown time blocking

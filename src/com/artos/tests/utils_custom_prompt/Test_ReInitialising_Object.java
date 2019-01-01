@@ -10,11 +10,11 @@ import com.artos.interfaces.TestExecutable;
 import com.artos.utils.CustomPrompt;
 import com.artos.utils.Guard;
 
-@TestPlan(decription = "Test_ReInitialising_Object", preparedBy = "arpit", preparationDate = "27/09/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "Test_ReInitialising_Object", preparedBy = "arpit", preparationDate = "27/09/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
 public class Test_ReInitialising_Object implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Re-Initialise count down timer object which is already launched in

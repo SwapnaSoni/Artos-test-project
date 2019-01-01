@@ -15,7 +15,7 @@ public class Test_Server_RealTimelog implements TestExecutable {
 
 	TCPServer server;
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		Transform _transform = new Transform();

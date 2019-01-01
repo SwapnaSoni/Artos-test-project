@@ -7,11 +7,11 @@ import com.artos.interfaces.TestExecutable;
 import com.artos.utils.Guard;
 import com.artos.utils.UtilsString;
 
-@TestPlan(decription = "", preparedBy = "arpit", preparationDate = "12/05/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "", preparedBy = "arpit", preparationDate = "12/05/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
 public class Test_WildCardMatch implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		String str = "THISisArpitos_Test12345@#$%";

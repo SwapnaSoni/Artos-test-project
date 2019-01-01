@@ -15,7 +15,7 @@ import com.artos.utils.CustomPrompt;
 public class Test_Image_Size implements TestExecutable {
 
 	@Override
-	public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		long starttime = System.currentTimeMillis();

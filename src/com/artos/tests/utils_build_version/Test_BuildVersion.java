@@ -6,11 +6,11 @@ import com.artos.framework.Version;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@TestPlan(decription = "Test_BuildVersion", preparedBy = "arpit", preparationDate = "23/08/2018", reviewedBy = "", reviewDate = "")
+@TestPlan(description = "Test_BuildVersion", preparedBy = "arpit", preparationDate = "23/08/2018", reviewedBy = "", reviewDate = "")
 @TestCase(skip = false, sequence = 0)
 public class Test_BuildVersion implements TestExecutable {
 
-	@Override public void execute(TestContext context, Object data1, Object data2) throws Exception {
+	@Override public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		context.getLogger().info("Build Version {}", new Version().getBuildVersion());
