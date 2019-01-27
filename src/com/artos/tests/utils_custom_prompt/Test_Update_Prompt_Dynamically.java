@@ -1,6 +1,7 @@
 package com.artos.tests.utils_custom_prompt;
 
 import com.artos.annotation.TestCase;
+import com.artos.annotation.Unit;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 import com.artos.utils.CustomPrompt;
@@ -8,7 +9,8 @@ import com.artos.utils.CustomPrompt;
 @TestCase(skip = false, sequence = 0)
 public class Test_Update_Prompt_Dynamically implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Unit
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Countdown time blocking

@@ -3,6 +3,7 @@ package com.artos.tests.utils_custom_prompt;
 import java.util.concurrent.CountDownLatch;
 
 import com.artos.annotation.TestCase;
+import com.artos.annotation.Unit;
 import com.artos.framework.Enums.TestStatus;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
@@ -20,10 +21,11 @@ import com.artos.utils.Guard;
 @TestCase(skip = false, sequence = 0)
 public class Test_Cntdwn_Latch implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception, InterruptedException {
+	@Unit
+	public void execute(TestContext context) throws Exception, InterruptedException {
 
 		// --------------------------------------------------------------------------------------------
-		//Blocking Countdown Latch
+		// Blocking Countdown Latch
 		CountDownLatch cntdwnltch = new CountDownLatch(2);
 		CustomPrompt cntdwn1 = new CustomPrompt(cntdwnltch, 15000);
 		cntdwn1.setBtnYesText("YES");
@@ -32,8 +34,8 @@ public class Test_Cntdwn_Latch implements TestExecutable {
 		cntdwn1.start();
 		cntdwnltch.await();
 		context.setTestStatus(TestStatus.PASS, "Blocking Successful");
-		
-		//Unblocking Countdown Latch
+
+		// Unblocking Countdown Latch
 		CustomPrompt cntdwn2 = new CustomPrompt(null, 15000);
 		cntdwn2.setTitle("Unblocking Latch Test");
 		cntdwn2.setBtnYesText("YES");

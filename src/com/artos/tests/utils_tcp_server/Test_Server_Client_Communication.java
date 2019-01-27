@@ -2,6 +2,7 @@ package com.artos.tests.utils_tcp_server;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
+import com.artos.annotation.Unit;
 import com.artos.framework.Enums.TestStatus;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
@@ -20,7 +21,8 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 0)
 public class Test_Server_Client_Communication implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Unit
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		RunServer s1 = new RunServer(context, 1200, null, null);

@@ -28,7 +28,7 @@ public class DataProvider {
 
 	@com.artos.annotation.DataProvider(name = "NonStaticUserNamesIntegerString")
 	public Object[][] nonStaticIntegerString(TestContext context) {
-		
+
 		// @formatter:off
 		return new Object[][] { 
 			{ 1, "Test@123" },
@@ -39,7 +39,7 @@ public class DataProvider {
 
 	@com.artos.annotation.DataProvider(name = "NonStaticUserNamesIntegerByteArray")
 	public Object[][] nonStaticStringByteArray(TestContext context) {
-		
+
 		// @formatter:off
 		return new Object[][] { 
 			{ 1, new byte[] { 1, 2, 3, 4 } },

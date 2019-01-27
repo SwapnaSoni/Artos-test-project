@@ -2,6 +2,7 @@ package com.artos.tests.annotation_testtimeout;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
+import com.artos.annotation.Unit;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
@@ -9,7 +10,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 0, testtimeout = 5000)
 public class Test_ThreadTimeout_WithinRange implements TestExecutable {
 
-	@Override
+	@Unit
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

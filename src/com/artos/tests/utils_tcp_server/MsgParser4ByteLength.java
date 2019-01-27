@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.artos.annotation.Unit;
 import com.artos.interfaces.ConnectableMessageParser;
 import com.artos.utils.Transform;
 
@@ -14,7 +15,7 @@ public class MsgParser4ByteLength implements ConnectableMessageParser {
 	byte[] leftOverBytes = null;
 	List<byte[]> msgList = null;
 
-	@Override
+	@Unit
 	public List<byte[]> parse(byte[] data) {
 
 		// reset variable before use
@@ -69,7 +70,7 @@ public class MsgParser4ByteLength implements ConnectableMessageParser {
 		return true;
 	}
 
-	@Override
+	@Unit
 	public byte[] getLeftOverBytes() {
 		return leftOverBytes;
 	}

@@ -3,10 +3,9 @@ package com.artos.tests.launch_options;
 import java.util.ArrayList;
 
 import com.artos.framework.infra.Runner;
-import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;
 
-public class Main_list_empty implements PrePostRunnable {
+public class Main_list_empty {
 
 	public static ArrayList<TestExecutable> getTestList() throws Exception {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
@@ -41,7 +40,8 @@ public class Main_list_empty implements PrePostRunnable {
 		Runner runner = new Runner(Main_list_empty.class);
 		// empty test list
 		ArrayList<TestExecutable> testlist = new ArrayList<TestExecutable>();
-		runner.run(args, testlist, 1);
+		runner.setTestList(getTestList());
+		runner.run(args);
 	}
 
 }

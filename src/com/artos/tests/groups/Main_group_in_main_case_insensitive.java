@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.artos.framework.infra.Runner;
-import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;
 
-public class Main_group_in_main_case_insensitive implements PrePostRunnable {
+public class Main_group_in_main_case_insensitive {
 
 	public static ArrayList<TestExecutable> getTestList() throws Exception {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
@@ -46,7 +45,9 @@ public class Main_group_in_main_case_insensitive implements PrePostRunnable {
 		groupList.add("Ci");
 		groupList.add("aUTO");
 		groupList.add("semi");
-		runner.run(args, getTestList(), 1, groupList);
+		runner.setTestList(getTestList());
+		runner.setTestGroupList(groupList);
+		runner.run(args);
 	}
 
 }

@@ -2,6 +2,7 @@ package com.artos.tests.annotation_dataprovider;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
+import com.artos.annotation.Unit;
 import com.artos.framework.Enums.TestStatus;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
@@ -10,7 +11,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 5, dataprovider = "StaticUserNamesStringString")
 public class Test_ExtentReport_Child_Status implements TestExecutable {
 
-	@Override
+	@Unit
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

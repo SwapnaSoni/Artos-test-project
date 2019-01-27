@@ -5,6 +5,7 @@ import java.util.concurrent.CountDownLatch;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
+import com.artos.annotation.Unit;
 import com.artos.framework.infra.LogWrapper;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
@@ -14,7 +15,8 @@ import com.artos.utils.CustomPrompt;
 @TestCase(skip = false, sequence = 0, label = "all:semiautomated")
 public class Test_countdown_timer implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Unit
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		LogWrapper logger = context.getLogger();

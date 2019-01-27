@@ -2,6 +2,7 @@ package com.artos.tests.annotation_dataprovider;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
+import com.artos.annotation.Unit;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
@@ -9,7 +10,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 9, dataprovider = "NullDataProvider")
 public class Test_Null_DataProvider implements TestExecutable {
 
-	@Override
+	@Unit
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

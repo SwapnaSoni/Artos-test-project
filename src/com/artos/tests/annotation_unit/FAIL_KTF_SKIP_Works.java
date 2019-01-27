@@ -9,7 +9,7 @@ import com.artos.interfaces.TestExecutable;
 
 @TestPlan(preparedBy = "arpit", preparationDate = "2/01/2019", bdd = "GIVEN unit annotation is used THEN user is allowed to set unique status per test unit AND test case will take worst outcome from all units")
 @TestCase(skip = false, sequence = 8)
-public class PASS_KTF_SKIP_Works implements TestExecutable {
+public class FAIL_KTF_SKIP_Works implements TestExecutable {
 
 	@Unit(sequence = 1)
 	public void sequenceTest_1(TestContext context) {

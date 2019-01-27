@@ -1,4 +1,4 @@
-package com.artos.tests.annotation_dataprovider;
+package com.artos.tests.utils_custom_prompt;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
@@ -6,17 +6,16 @@ import com.artos.annotation.Unit;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "GIVEN data provider method is public but not static THEN data provider should work as expected")
-@TestCase(skip = false, sequence = 3, dataprovider = "NonStaticUserNamesStringInteger")
-public class Test_NonStatic_DataProvider implements TestExecutable {
+@TestPlan(preparedBy = "arpit", preparationDate = "13/12/2018", bdd = "")
+@TestCase(skip = false, sequence = 0)
+public class TEST_1213 implements TestExecutable {
 
 	@Unit
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		System.out.println(context.getParameterisedObject1() + ":" + context.getParameterisedObject2());
+		// TODO Write Test Here
 		// --------------------------------------------------------------------------------------------
 
 	}
-
 }

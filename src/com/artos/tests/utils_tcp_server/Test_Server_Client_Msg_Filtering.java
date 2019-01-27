@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 import com.artos.annotation.TestCase;
+import com.artos.annotation.Unit;
 import com.artos.framework.Enums.TestStatus;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.ConnectableFilter;
@@ -24,7 +25,8 @@ import com.artos.utils.CustomPrompt;
 @TestCase(skip = false, sequence = 0)
 public class Test_Server_Client_Msg_Filtering implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Unit
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		CountDownLatch cntdwn = new CountDownLatch(1);
@@ -38,7 +40,7 @@ public class Test_Server_Client_Msg_Filtering implements TestExecutable {
 		// Create Client filter
 		List<ConnectableFilter> filterListServer = new ArrayList<>();
 		ConnectableFilter filterServer = new ConnectableFilter() {
-			@Override
+			@Unit
 			public boolean meetCriteria(byte[] data) {
 				if (Arrays.equals(data, "Hi from Client".getBytes())) {
 					return true;
@@ -51,7 +53,7 @@ public class Test_Server_Client_Msg_Filtering implements TestExecutable {
 		// Create Server filter
 		List<ConnectableFilter> filterListClient = new ArrayList<>();
 		ConnectableFilter filterClient = new ConnectableFilter() {
-			@Override
+			@Unit
 			public boolean meetCriteria(byte[] data) {
 				if (Arrays.equals(data, "Hi from Server".getBytes())) {
 					return true;

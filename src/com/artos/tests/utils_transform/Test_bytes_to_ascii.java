@@ -4,6 +4,7 @@ import com.artos.annotation.Group;
 import com.artos.annotation.KnownToFail;
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
+import com.artos.annotation.Unit;
 import com.artos.framework.Enums.TestStatus;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
@@ -16,7 +17,8 @@ import com.artos.utils.Transform;
 @TestCase(skip = false, sequence = 0)
 public class Test_bytes_to_ascii implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Unit
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		Transform _tfm = new Transform();

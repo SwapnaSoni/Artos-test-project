@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
+import com.artos.annotation.Unit;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.ConnectableFilter;
 import com.artos.interfaces.TestExecutable;
@@ -16,7 +17,8 @@ import com.artos.utils.UDP;
 @TestCase(skip = false, sequence = 0)
 public class Test_UDP_Connector implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Unit
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Launch UDP server with filter in separate thread
@@ -27,8 +29,7 @@ public class Test_UDP_Connector implements TestExecutable {
 		UDP server2 = new UDP("127.0.0.1", 2345, "127.0.0.1", 1234);
 		server2.connect();
 		Transform _tfm = new Transform();
-		
-		
+
 		while (true) {
 			server2.sendMsg(_tfm.strHexToByteArray("31 32 33 34"));
 			Thread.sleep(100);
@@ -52,13 +53,13 @@ class UDPTest implements Runnable {
 		this.context = context;
 	}
 
-	@Override
+	@Unit
 	public void run() {
 		try {
 			// Add filter
 			List<ConnectableFilter> filterList = new ArrayList<>();
 			ConnectableFilter filter1 = new ConnectableFilter() {
-				@Override
+				@Unit
 				public boolean meetCriteria(byte[] data) {
 					if (data[0] == (byte) 0x31) {
 						return true;

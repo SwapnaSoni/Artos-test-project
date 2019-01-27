@@ -3,6 +3,7 @@ package com.artos.tests.utils_tcp_server;
 import java.net.SocketTimeoutException;
 
 import com.artos.annotation.TestCase;
+import com.artos.annotation.Unit;
 import com.artos.framework.Enums.TestStatus;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
@@ -22,7 +23,8 @@ import com.artos.utils.TCPServer;
 @TestCase(skip = false, sequence = 0)
 public class Test_Server_Connection_Timeout implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Unit
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// Check if user initialise server with fix socket timeout and no client

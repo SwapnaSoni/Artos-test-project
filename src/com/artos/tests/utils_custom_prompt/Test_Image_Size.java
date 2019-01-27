@@ -5,6 +5,7 @@ import java.util.concurrent.CountDownLatch;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
+import com.artos.annotation.Unit;
 import com.artos.framework.infra.LogWrapper;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
@@ -14,7 +15,7 @@ import com.artos.utils.CustomPrompt;
 @TestCase(skip = false, sequence = 0)
 public class Test_Image_Size implements TestExecutable {
 
-	@Override
+	@Unit
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
@@ -30,7 +31,7 @@ public class Test_Image_Size implements TestExecutable {
 		logger.debug("Yes Button Pressed : " + Boolean.toString(cntdwn.isButtonYesPressed()) + "And" + "No Button Pressed : "
 				+ Boolean.toString(cntdwn.isButtonNoPressed()));
 		System.err.println(System.currentTimeMillis() - starttime);
-		
+
 		starttime = System.currentTimeMillis();
 		contdwn = new CountDownLatch(1);
 		cntdwn = new CustomPrompt(contdwn, 15000);

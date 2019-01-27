@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.artos.framework.infra.Runner;
-import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;
 
-public class Main_list_empty_group_empty implements PrePostRunnable {
+public class Main_list_empty_group_empty {
 
 	public static ArrayList<TestExecutable> getTestList() throws Exception {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
@@ -34,7 +33,9 @@ public class Main_list_empty_group_empty implements PrePostRunnable {
 		Runner runner = new Runner(Main_list_empty_group_empty.class);
 		ArrayList<TestExecutable> testsList = new ArrayList<TestExecutable>();
 		List<String> groupList = new ArrayList<>();
-		runner.run(args, testsList, 1, groupList);
+		runner.setTestList(getTestList());
+		runner.setTestGroupList(groupList);
+		runner.run(args);
 	}
 
 }

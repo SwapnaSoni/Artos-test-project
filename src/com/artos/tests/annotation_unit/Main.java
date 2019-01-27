@@ -1,11 +1,11 @@
 package com.artos.tests.annotation_unit;
 
 import java.util.ArrayList;
+
 import com.artos.framework.infra.Runner;
-import com.artos.interfaces.PrePostRunnable;
 import com.artos.interfaces.TestExecutable;
 
-public class Main implements PrePostRunnable {
+public class Main {
 
 	public static ArrayList<TestExecutable> getTestList() throws Exception {
 		ArrayList<TestExecutable> tests = new ArrayList<TestExecutable>();
@@ -21,7 +21,7 @@ public class Main implements PrePostRunnable {
 
 	public static void main(String[] args) throws Exception {
 		Runner runner = new Runner(Main.class);
-		runner.run(args, getTestList(), 1);
+		runner.setTestList(getTestList()); runner.run(args);
 	}
 
 }

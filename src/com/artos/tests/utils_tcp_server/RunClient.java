@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import com.artos.annotation.Unit;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.ConnectableFilter;
 import com.artos.utils.TCPClient;
@@ -21,7 +22,7 @@ public class RunClient implements Runnable {
 		this.port = port;
 	}
 
-	@Override
+	@Unit
 	public void run() {
 		try {
 			TCPClient client = new TCPClient("127.0.0.1", port, null, filterListClient);

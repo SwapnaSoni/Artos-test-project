@@ -7,7 +7,8 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 0)
 public class Test_3 implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Override
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		// TODO Write Test Here

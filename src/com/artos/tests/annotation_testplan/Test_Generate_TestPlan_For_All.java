@@ -3,8 +3,9 @@ package com.artos.tests.annotation_testplan;
 import java.util.List;
 
 import com.artos.annotation.TestCase;
-import com.artos.framework.ScanTestSuite;
+import com.artos.annotation.Unit;
 import com.artos.framework.TestPlanWrapper;
+import com.artos.framework.infra.ScanTestSuite;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
@@ -20,10 +21,11 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 1)
 public class Test_Generate_TestPlan_For_All implements TestExecutable {
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Unit
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
-		ScanTestSuite testPlan = new ScanTestSuite("");		
+		ScanTestSuite testPlan = new ScanTestSuite(context, "");
 		List<TestPlanWrapper> testPlanObjectList = testPlan.getTestPlan(context);
 		for (TestPlanWrapper testPlanObject : testPlanObjectList) {
 			StringBuilder sb = new StringBuilder();

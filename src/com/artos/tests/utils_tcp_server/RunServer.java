@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import com.artos.annotation.Unit;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.ConnectableFilter;
 import com.artos.interfaces.ConnectableMessageParser;
@@ -24,7 +25,7 @@ public class RunServer implements Runnable {
 		this.port = port;
 	}
 
-	@Override
+	@Unit
 	public void run() {
 		try {
 			TCPServer server = new TCPServer(port, msgParser, filterListServer);

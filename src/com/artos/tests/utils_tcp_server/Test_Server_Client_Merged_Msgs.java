@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import com.artos.annotation.TestCase;
+import com.artos.annotation.Unit;
 import com.artos.framework.Enums.TestStatus;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.ConnectableFilter;
@@ -20,14 +21,15 @@ import com.artos.utils.Transform;
 public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 	TCPServer server;
 
-	@Override public void execute(TestContext context) throws Exception {
+	@Unit
+	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
 		Transform _transform = new Transform();
 
 		// Create Server filter
 		ConnectableFilter filter = new ConnectableFilter() {
-			@Override
+			@Unit
 			public boolean meetCriteria(byte[] data) {
 				if (Arrays.equals(data, _transform.strHexToByteArray("00 00 00 04 01 02 03 04"))) {
 					return true;
@@ -40,7 +42,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		ExecuteServerTest(context, false, null);
 		context.getLogger().debug("\nnServer Filter enabled + msg parser is provided");
 		ExecuteServerTest(context, true, filter);
-		
+
 		context.getLogger().debug("\nClient Filter disabled + msg parser is provided");
 		ExecuteClientTest(context, false, null);
 		context.getLogger().debug("\nClient Filter enabled + msg parser is provided");
@@ -61,7 +63,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		// Start Server
 		Thread t1 = new Thread(new Runnable() {
 
-			@Override
+			@Unit
 			public void run() {
 				try {
 					if (enableFilter) {
@@ -126,8 +128,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		validationList.add(_transform.strHexToByteArray(msg3));
 
 		/*
-		 * send msg which is merged with other msg and has third msg length only
-		 * and second msg brings data
+		 * send msg which is merged with other msg and has third msg length only and second msg brings data
 		 */
 		client.sendMsg(_transform.strHexToByteArray(msg2 + msg3 + msg5));
 		Thread.sleep(500);
@@ -156,8 +157,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		validationList.add(_transform.strHexToByteArray(msg5 + msg6));
 
 		/*
-		 * Send only length and then data which is merged with other msg in
-		 * subsequent msg
+		 * Send only length and then data which is merged with other msg in subsequent msg
 		 */
 		client.sendMsg(_transform.strHexToByteArray(msg5));
 		Thread.sleep(500);
@@ -167,8 +167,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		validationList.add(_transform.strHexToByteArray(msg2));
 
 		/*
-		 * Send only partial length and then data which is merged with other msg
-		 * in subsequent msg
+		 * Send only partial length and then data which is merged with other msg in subsequent msg
 		 */
 		client.sendMsg(_transform.strHexToByteArray(msg7));
 		Thread.sleep(500);
@@ -208,7 +207,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		// Start Server
 		Thread t1 = new Thread(new Runnable() {
 
-			@Override
+			@Unit
 			public void run() {
 				try {
 					server = new TCPServer(1300);
@@ -274,8 +273,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		validationList.add(_transform.strHexToByteArray(msg3));
 
 		/*
-		 * send msg which is merged with other msg and has third msg length only
-		 * and second msg brings data
+		 * send msg which is merged with other msg and has third msg length only and second msg brings data
 		 */
 		server.sendMsg(_transform.strHexToByteArray(msg2 + msg3 + msg5));
 		Thread.sleep(500);
@@ -304,8 +302,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		validationList.add(_transform.strHexToByteArray(msg5 + msg6));
 
 		/*
-		 * Send only length and then data which is merged with other msg in
-		 * subsequent msg
+		 * Send only length and then data which is merged with other msg in subsequent msg
 		 */
 		server.sendMsg(_transform.strHexToByteArray(msg5));
 		Thread.sleep(500);
@@ -315,8 +312,7 @@ public class Test_Server_Client_Merged_Msgs implements TestExecutable {
 		validationList.add(_transform.strHexToByteArray(msg2));
 
 		/*
-		 * Send only partial length and then data which is merged with other msg
-		 * in subsequent msg
+		 * Send only partial length and then data which is merged with other msg in subsequent msg
 		 */
 		server.sendMsg(_transform.strHexToByteArray(msg7));
 		Thread.sleep(500);
