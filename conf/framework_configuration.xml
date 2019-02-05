@@ -38,7 +38,7 @@
     <property name="enableEmailClient">false</property>
     <property name="enableArtosDebug">false</property>
     <property name="generateEclipseTemplate">false</property>
-    <property name="generateTestScript">true</property>
+    <property name="generateTestScript">false</property>
     <property name="stopOnFail">false</property>
   </features>
 </configuration>

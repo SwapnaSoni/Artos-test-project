@@ -1,0 +1,4 @@
+Manifest-version: 1.0
+Created-By: 1.0 (Macagua Corporation)
+Main-Class: TestRunner
+Class-Path: lib/artos-0.0.5-beta-2.jar

@@ -75,4 +75,9 @@ public class DataProvider {
 	public Object[][] nullDataProvider(TestContext context) {
 		return null;
 	}
+
+	@com.artos.annotation.DataProvider(name = "exceptionDataProvider")
+	public Object[][] exceptionDataProvider(TestContext context) throws Exception {
+		throw new Exception("This data provider throws exception");
+	}
 }

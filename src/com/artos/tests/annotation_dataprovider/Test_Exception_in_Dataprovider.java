@@ -6,9 +6,9 @@ import com.artos.annotation.Unit;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "data provider can return object which is 1D")
-@TestCase(skip = false, sequence = 7, dataprovider = "NonStaticUserNamesSingleDimention")
-public class Test_Single_Dimention_DataProvider implements TestExecutable {
+@TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "GIVEN dataprovider method throws exception during execution then test will be marked as failed with appropriate warning")
+@TestCase(skip = false, sequence = 8, dataprovider = "exceptionDataProvider")
+public class Test_Exception_in_Dataprovider implements TestExecutable {
 
 	@Unit
 	public void execute(TestContext context) throws Exception {
