@@ -22,6 +22,10 @@ public class Main_group_in_main_case_insensitive {
 		tests.add(new Test_CI_SEMI_1());
 		tests.add(new Test_SEMI_1());
 		tests.add(new Test_SEMI_2());
+		tests.add(new TEST_AUTO_REGEX());
+		tests.add(new TEST_GROUP_NUMERIC());
+		tests.add(new TEST_MANUAL());
+		tests.add(new TEST_SPECIAL_CHAR());
 		// --------------------------------------------------------------------------------------------
 
 		return tests;
