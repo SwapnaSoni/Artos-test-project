@@ -7,10 +7,10 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "data provider method can return null")
-@TestCase(skip = false, sequence = 9, dataprovider = "NullDataProvider")
+@TestCase(skip = false, sequence = 9)
 public class Test_Null_DataProvider implements TestExecutable {
 
-	@Unit
+	@Unit(dataprovider = "NullDataProvider")
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

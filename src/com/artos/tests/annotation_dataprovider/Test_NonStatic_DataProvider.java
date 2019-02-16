@@ -7,10 +7,10 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "GIVEN data provider method is public but not static THEN data provider should work as expected")
-@TestCase(skip = false, sequence = 3, dataprovider = "NonStaticUserNamesStringInteger")
+@TestCase(skip = false, sequence = 3)
 public class Test_NonStatic_DataProvider implements TestExecutable {
 
-	@Unit
+	@Unit(dataprovider = "NonStaticUserNamesStringInteger")
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

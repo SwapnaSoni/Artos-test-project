@@ -7,10 +7,10 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "data provider can return object which is 1D")
-@TestCase(skip = false, sequence = 7, dataprovider = "NonStaticUserNamesSingleDimention")
+@TestCase(skip = false, sequence = 7)
 public class Test_Single_Dimention_DataProvider implements TestExecutable {
 
-	@Unit
+	@Unit(dataprovider = "NonStaticUserNamesSingleDimention")
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
