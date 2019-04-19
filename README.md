@@ -1,29 +1,19 @@
-# README #
+# Artos-test-project
 
-This README would normally document whatever steps are necessary to get your application up and running.
+ARTOS Sample Test Project (Maven)
 
-### What is this repository for? ###
+## Pre-Requisite
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Install JDK 1.8.43 or above (Installing just JRE will not work)
 
-### How do I get set up? ###
+## Eclipse IDE Steps
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Download or clone current project to local directory
+* Go to Eclipse => Import => Existing Maven projects
+* Click Next
+* Select downloaded/cloned project directory
+* Select the project from the list
+* Click Finish
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+If IDE is configured correctly with JDK 1.8 or above then project will work correctly.
+In case default project setting does not have ```src/test/java``` as a source directory then configure it appropriately.

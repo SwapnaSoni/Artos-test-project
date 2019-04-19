@@ -3,19 +3,20 @@
 
 	<!-- Project Info -->
 	<name>${project.groupId}:${project.artifactId}</name>
-	<url>https://github.com/Arpit-Shah/Arpitos_Test</url>
-	<description>Test Repository for arpitos features</description>
+	<url>https://github.com/Arpit-Shah/Artos</url>
+	<description>The ARTOS "ART OF SYSTEM TESTING" is a framework designed for regression, functional, integration, end to end and/or unit testing.</description>
+	<inceptionYear>2018</inceptionYear>
 
 	<!-- Project GAV Info -->
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.arpitos</groupId>
-	<artifactId>arpitos-test</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<groupId>com.companyname</groupId>
+	<artifactId>artos-test-project</artifactId>
+	<version>0.0.1</version>
 
 	<!-- Organisation Info -->
 	<organization>
-		<url>www.arpitos.com</url>
-		<name>Arpitos</name>
+		<url>www.company.com</url>
+		<name>CompanyName</name>
 	</organization>
 
 	<!-- Licence Info -->
@@ -26,138 +27,92 @@
 		</license>
 	</licenses>
 
-	<!-- Developer Info -->
-	<developers>
-		<developer>
-			<name>Arpit Shah</name>
-			<email>arpit.shah1@gmail.com</email>
-			<organization>None</organization>
-			<organizationUrl>http://com.arpitos.com</organizationUrl>
-		</developer>
-	</developers>
-
-	<!-- Source Repo Info -->
-	<scm>
-		<connection>scm:git:git://github.com/Arpit-Shah/Arpitos_Test.git</connection>
-		<developerConnection>scm:git:ssh://github.com:Arpit-Shah/Arpitos_Test.git</developerConnection>
-		<url>https://github.com/Arpit-Shah/Arpitos_Test/tree/master</url>
-	</scm>
-
-	<!-- Distribution Model -->
-	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
-
-	<!-- Dependencies -->
 	<dependencies>
 		<dependency>
-			<groupId>com.arpitos</groupId>
-			<artifactId>arpitos</artifactId>
-			<version>0.0.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/arpitos-fw-0.0.1.jar</systemPath>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>2.3.1</version>
+			<scope>test</scope>
 		</dependency>
-		<!--  <dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.10.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.10.0</version>
-		</dependency> -->
-		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
-			<version>3.1.0</version>
+			<version>3.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.theartos</groupId>
+			<artifactId>artos</artifactId>
+			<version>[0.0.10,)</version>
 		</dependency>
 	</dependencies>
 
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 
-	<!-- Build Plugins -->
+
+	<!-- Profile to help executing org.codehaus.mojo plugin in different environment -->
+	<profiles>
+		<profile>
+			<id>Windows</id>
+			<activation>
+				<os>
+					<family>Windows</family>
+				</os>
+			</activation>
+			<properties>
+				<script.extension>.bat</script.extension>
+			</properties>
+		</profile>
+		<profile>
+			<id>unix</id>
+			<activation>
+				<os>
+					<family>unix</family>
+				</os>
+			</activation>
+			<properties>
+				<script.extension>.sh</script.extension>
+			</properties>
+		</profile>
+	</profiles>
+
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<sourceDirectory>src/test/java</sourceDirectory>
+		<testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
 
-		<!-- Maven Compiler Plugins -->
 		<plugins>
+			<!-- Compiler plug-in -->
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>3.2</version> <!-- or whatever current version -->
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
-			<!-- Nexus sonatype stagin Plugins -->
+			<!-- Launch ARTOS from command line -->
 			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.7</version>
-				<extensions>true</extensions>
-				<configuration>
-					<serverId>ossrh</serverId>
-					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<autoReleaseAfterClose>true</autoReleaseAfterClose>
-				</configuration>
-			</plugin>
-
-			<!-- Maven source tar generator Plugins -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>2.2.1</version>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
 				<executions>
 					<execution>
-						<id>attach-sources</id>
+						<phase>test</phase>
 						<goals>
-							<goal>jar-no-fork</goal>
+							<goal>exec</goal>
 						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<!-- Maven Javadoc generator Plugins -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9.1</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<additionalOptions>
-						<additionalOption>-Xdoclint:none</additionalOption>
-					</additionalOptions>
-				</configuration>
-			</plugin>
-
-			<!-- Maven gpg/signing generator Plugins -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.5</version>
-				<executions>
-					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>sign</goal>
-						</goals>
+						<configuration>
+							<executable>./Run_ARTOS${script.extension}</executable>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

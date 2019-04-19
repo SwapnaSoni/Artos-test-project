@@ -1,7 +1,4 @@
-/bin/
-script/
-assets/
-.project
-.classpath
+/target/
+conf/
 reporting/
-conf/user_auth_settings.xml
+script/
