@@ -8,10 +8,10 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "Given data provider is used AND test case sets different status based on data provided then extent report will log status as part of child test")
-@TestCase(skip = false, sequence = 5, dataprovider = "StaticUserNamesStringString")
+@TestCase(skip = false, sequence = 5)
 public class Test_ExtentReport_Child_Status implements TestExecutable {
 
-	@Unit
+	@Unit(dataprovider = "StaticUserNamesStringString")
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

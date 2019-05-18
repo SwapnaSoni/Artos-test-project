@@ -5,3 +5,4 @@ assets/
 .classpath
 reporting/
 conf/user_auth_settings.xml
+/target/

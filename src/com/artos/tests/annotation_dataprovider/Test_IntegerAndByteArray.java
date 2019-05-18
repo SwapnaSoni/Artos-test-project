@@ -9,10 +9,10 @@ import com.artos.interfaces.TestExecutable;
 import com.artos.utils.Transform;
 
 @TestPlan(preparedBy = "arpit", preparationDate = "27/10/2018", bdd = "Dataprovider can provide data as integer or byte array")
-@TestCase(skip = false, sequence = 0, dataprovider = "NonStaticUserNamesIntegerByteArray")
+@TestCase(skip = false, sequence = 0)
 public class Test_IntegerAndByteArray implements TestExecutable {
 
-	@Unit
+	@Unit(dataprovider = "NonStaticUserNamesIntegerByteArray")
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

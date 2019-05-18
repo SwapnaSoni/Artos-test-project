@@ -12,7 +12,7 @@ import com.artos.interfaces.TestExecutable;
 @TestCase(skip = false, sequence = 9)
 public class FAIL_KTF_ENFORCE_WORKS implements TestExecutable {
 
-	@KnownToFail(ktf = true, bugref = "")
+	@KnownToFail(ktf = true)
 	@Unit(skip = false, sequence = 1)
 	public void unit1(TestContext context) throws Exception {
 		// --------------------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ public class FAIL_KTF_ENFORCE_WORKS implements TestExecutable {
 		// --------------------------------------------------------------------------------------------
 	}
 
-	@KnownToFail(ktf = true, bugref = "")
+	@KnownToFail(ktf = true)
 	@Unit(skip = false, sequence = 2)
 	public void unit2(TestContext context) throws Exception {
 		// --------------------------------------------------------------------------------------------

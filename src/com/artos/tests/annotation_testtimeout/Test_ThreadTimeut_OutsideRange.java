@@ -7,10 +7,10 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @TestPlan(preparedBy = "arpit", preparationDate = "4/11/2018", bdd = "")
-@TestCase(skip = false, sequence = 0, testtimeout = 5000)
+@TestCase(skip = false, sequence = 0)
 public class Test_ThreadTimeut_OutsideRange implements TestExecutable {
 
-	@Unit
+	@Unit(testtimeout = 5000)
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

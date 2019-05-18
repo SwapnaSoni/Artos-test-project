@@ -7,10 +7,10 @@ import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
 @TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "GIVEN dataprovider method throws exception during execution then test will be marked as failed with appropriate warning")
-@TestCase(skip = false, sequence = 8, dataprovider = "exceptionDataProvider")
+@TestCase(skip = false, sequence = 8)
 public class Test_Exception_in_Dataprovider implements TestExecutable {
 
-	@Unit
+	@Unit(dataprovider = "exceptionDataProvider")
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

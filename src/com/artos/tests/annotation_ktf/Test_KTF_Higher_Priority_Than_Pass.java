@@ -8,12 +8,12 @@ import com.artos.framework.Enums.TestStatus;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@KnownToFail(ktf = false, bugref = "JIRA-????")
 @TestPlan(preparedBy = "arpit", preparationDate = "6/10/2018", bdd = "GIVEN KTF is atleast set once during test execution AND rest of the time test is set with PASS status THEN test outcome will be KTF")
 @TestCase(skip = false, sequence = 3)
 public class Test_KTF_Higher_Priority_Than_Pass implements TestExecutable {
 
 	@Unit
+	@KnownToFail(ktf = false)
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------
