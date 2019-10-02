@@ -12,7 +12,7 @@ import com.artos.interfaces.TestExecutable;
 import com.artos.utils.CustomPrompt;
 
 @TestPlan(description = "", preparedBy = "arpit", preparationDate = "3/05/2018", reviewedBy = "", reviewDate = "")
-@TestCase(skip = false, sequence = 0, label = "all:semiautomated")
+@TestCase(skip = false, sequence = 0)
 public class Test_countdown_timer implements TestExecutable {
 
 	@Unit

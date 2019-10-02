@@ -4,9 +4,9 @@ import java.util.List;
 
 import com.artos.annotation.TestCase;
 import com.artos.annotation.Unit;
-import com.artos.framework.TestPlanWrapper;
 import com.artos.framework.infra.ScanTestSuite;
 import com.artos.framework.infra.TestContext;
+import com.artos.framework.infra.TestPlanWrapper;
 import com.artos.interfaces.TestExecutable;
 
 /**

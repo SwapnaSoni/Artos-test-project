@@ -14,6 +14,7 @@ import com.artos.interfaces.TestExecutable;
 public class Test_Current_Log_Files implements TestExecutable {
 
 	@Unit
+	@KnownToFail(ktf = false)
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

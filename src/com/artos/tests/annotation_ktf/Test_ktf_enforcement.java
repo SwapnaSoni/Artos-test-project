@@ -14,6 +14,7 @@ public class Test_ktf_enforcement implements TestExecutable {
 
 	@KnownToFail(ktf = true, bugref = "JIRA-????")
 	@Unit
+	@KnownToFail
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

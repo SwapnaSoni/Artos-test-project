@@ -1,19 +1,15 @@
 package com.artos.tests.annotation_dataprovider;
 
 import com.artos.annotation.TestCase;
-import com.artos.annotation.TestImportance;
 import com.artos.annotation.TestPlan;
 import com.artos.annotation.Unit;
-import com.artos.framework.Enums.Importance;
 import com.artos.framework.infra.TestContext;
 import com.artos.interfaces.TestExecutable;
 
-@TestImportance(Importance.HIGH)
 @TestPlan(preparedBy = "arpit", preparationDate = "14/10/2018", bdd = "GIVEN dataprovider annotation is used AND dataprovider method is mentioned AND dataprovider method returns no value THEN testcase is executed with data provider object value to be null")
 @TestCase(skip = false, sequence = 8)
 public class Test_EmptyDataProvider implements TestExecutable {
 
-	@TestImportance(Importance.HIGH)
 	@Unit(dataprovider = "EmptyDataProvider")
 	public void execute(TestContext context) throws Exception {
 

@@ -14,6 +14,7 @@ public class Test_KTF_Higher_Priority_Than_Pass implements TestExecutable {
 
 	@KnownToFail(ktf = false, bugref = "JIRA-????")
 	@Unit
+	@KnownToFail(ktf = false)
 	public void execute(TestContext context) throws Exception {
 
 		// --------------------------------------------------------------------------------------------

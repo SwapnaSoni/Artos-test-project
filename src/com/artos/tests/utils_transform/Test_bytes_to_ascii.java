@@ -1,7 +1,6 @@
 package com.artos.tests.utils_transform;
 
 import com.artos.annotation.Group;
-import com.artos.annotation.KnownToFail;
 import com.artos.annotation.TestCase;
 import com.artos.annotation.TestPlan;
 import com.artos.annotation.Unit;

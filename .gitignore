@@ -1,4 +1,7 @@
-/target/
-conf/
-reporting/
+/bin/
 script/
+.project
+.classpath
+reporting/
+conf/user_auth_settings.xml
+/target/
