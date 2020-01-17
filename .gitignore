@@ -1,7 +1,6 @@
-/bin/
-script/
-.project
-.classpath
-reporting/
-conf/user_auth_settings.xml
 /target/
+conf/
+reporting/
+script/
+template/template.xml
+template/IntelliJ_template.zip
